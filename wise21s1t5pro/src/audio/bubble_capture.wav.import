@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bubble_capture.wav-fa74432f4d316b0cf60c913fed309bca.sample"
+
+[deps]
+
+source_file="res://src/audio/bubble_capture.wav"
+dest_files=[ "res://.import/bubble_capture.wav-fa74432f4d316b0cf60c913fed309bca.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

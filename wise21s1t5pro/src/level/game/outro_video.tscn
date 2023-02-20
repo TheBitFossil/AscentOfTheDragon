@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/level/game/outro_video.gd" type="Script" id=1]
+[ext_resource path="res://assets/video/aotd_outro_final.ogv" type="VideoStream" id=2]
+[ext_resource path="res://src/themes/theme.tres" type="Theme" id=3]
+
+[node name="outro" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 3 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="outro_video" type="VideoPlayer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InputTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="MouseTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Skipper" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextTimer" type="Timer" parent="Skipper"]
+one_shot = true
+
+[node name="SkipIntroLabel" type="RichTextLabel" parent="Skipper"]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -713.0
+margin_top = -188.0
+margin_right = -63.0
+margin_bottom = -118.0
+bbcode_enabled = true
+bbcode_text = " [b][color=#ffebdf] Hold Space to skip[/color][/b]"
+text = "  Hold Space to skip"
+
+[node name="ProgressBar" type="ProgressBar" parent="Skipper"]
+visible = false
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1376.0
+margin_top = -103.0
+margin_right = -174.0
+margin_bottom = -53.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="finished" from="outro_video" to="." method="_on_intro_video_finished"]
+[connection signal="timeout" from="InputTimer" to="." method="_on_InputTimer_timeout"]
+[connection signal="timeout" from="MouseTimer" to="." method="_on_MouseTimer_timeout"]
+[connection signal="timeout" from="Skipper/TextTimer" to="." method="_on_TextTimer_timeout"]

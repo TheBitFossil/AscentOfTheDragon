@@ -1,0 +1,286 @@
+[gd_scene load_steps=48 format=2]
+
+[ext_resource path="res://src/ui/hud.gd" type="Script" id=1]
+[ext_resource path="res://src/ui/life_widget.gd" type="Script" id=2]
+[ext_resource path="res://assets/sprites/hud/points/filled_19.png" type="Texture" id=3]
+[ext_resource path="res://assets/sprites/hud/ammo/energy_0_von_3.png" type="Texture" id=4]
+[ext_resource path="res://assets/sprites/hud/points/filled_5.png" type="Texture" id=5]
+[ext_resource path="res://assets/sprites/hud/health/health_100_.png" type="Texture" id=6]
+[ext_resource path="res://src/ui/ammo_widget.gd" type="Script" id=7]
+[ext_resource path="res://src/ui/points_widget.gd" type="Script" id=8]
+[ext_resource path="res://assets/sprites/hud/ammo/energy_1_von_3.png" type="Texture" id=9]
+[ext_resource path="res://assets/sprites/hud/points/filled_9.png" type="Texture" id=10]
+[ext_resource path="res://assets/sprites/hud/ammo/energy_4_von_5.png" type="Texture" id=11]
+[ext_resource path="res://assets/sprites/hud/ammo/energy_2_von_3.png" type="Texture" id=12]
+[ext_resource path="res://assets/sprites/hud/points/filled_3.png" type="Texture" id=13]
+[ext_resource path="res://assets/sprites/hud/points/filled_0.png" type="Texture" id=14]
+[ext_resource path="res://assets/sprites/hud/health/health_0_.png" type="Texture" id=15]
+[ext_resource path="res://assets/sprites/hud/points/filled_17.png" type="Texture" id=16]
+[ext_resource path="res://assets/sprites/hud/health/health_60_.png" type="Texture" id=17]
+[ext_resource path="res://assets/sprites/hud/points/filled_16.png" type="Texture" id=18]
+[ext_resource path="res://assets/sprites/hud/points/filled_2.png" type="Texture" id=19]
+[ext_resource path="res://assets/sprites/hud/points/filled_6.png" type="Texture" id=20]
+[ext_resource path="res://assets/sprites/hud/points/filled_18.png" type="Texture" id=21]
+[ext_resource path="res://assets/sprites/hud/health/health_40_.png" type="Texture" id=22]
+[ext_resource path="res://assets/sprites/hud/points/filled_8.png" type="Texture" id=23]
+[ext_resource path="res://assets/sprites/hud/ammo/energy_5_von_5.png" type="Texture" id=24]
+[ext_resource path="res://assets/sprites/hud/points/filled_10.png" type="Texture" id=25]
+[ext_resource path="res://assets/sprites/hud/points/filled_14.png" type="Texture" id=26]
+[ext_resource path="res://assets/sprites/hud/ammo/energy_3_von_3.png" type="Texture" id=27]
+[ext_resource path="res://assets/sprites/hud/points/filled_4.png" type="Texture" id=28]
+[ext_resource path="res://assets/sprites/hud/health/health_20_.png" type="Texture" id=29]
+[ext_resource path="res://assets/sprites/hud/points/filled_20.png" type="Texture" id=30]
+[ext_resource path="res://assets/sprites/hud/points/filled_15.png" type="Texture" id=31]
+[ext_resource path="res://assets/sprites/hud/points/filled_7.png" type="Texture" id=32]
+[ext_resource path="res://assets/sprites/hud/points/filled_1.png" type="Texture" id=33]
+[ext_resource path="res://assets/sprites/hud/points/filled_11.png" type="Texture" id=34]
+[ext_resource path="res://assets/sprites/hud/points/filled_12.png" type="Texture" id=35]
+[ext_resource path="res://assets/sprites/hud/health/health_80_.png" type="Texture" id=36]
+[ext_resource path="res://assets/sprites/hud/points/filled_13.png" type="Texture" id=37]
+[ext_resource path="res://src/themes/theme.tres" type="Theme" id=38]
+[ext_resource path="res://src/ui/cage_text.gd" type="Script" id=39]
+[ext_resource path="res://assets/sprites/kirin_head.png" type="Texture" id=40]
+[ext_resource path="res://assets/sprites/dragon_tiger.png" type="Texture" id=41]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 15 ), ExtResource( 29 ), ExtResource( 22 ), ExtResource( 17 ), ExtResource( 36 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 9 ), ExtResource( 12 ), ExtResource( 27 ), ExtResource( 11 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 14 ), ExtResource( 33 ), ExtResource( 19 ), ExtResource( 13 ), ExtResource( 28 ), ExtResource( 5 ), ExtResource( 20 ), ExtResource( 32 ), ExtResource( 23 ), ExtResource( 10 ), ExtResource( 25 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 37 ), ExtResource( 26 ), ExtResource( 31 ), ExtResource( 18 ), ExtResource( 16 ), ExtResource( 21 ), ExtResource( 3 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("banner_low/cage_text:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("banner_low/cage_text/rich_text_label:percent_visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "fade_in"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("banner_low/cage_text:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("banner_low/cage_text/rich_text_label:percent_visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 1.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("banner_low/cage_text:is_active")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("banner_low/cage_text/timer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.8 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ -1 ],
+"method": "start"
+} ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/path = NodePath("banner_low/cage_text:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("banner_low/cage_text/rich_text_label:percent_visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("banner_low/cage_text:is_active")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource( 1 )
+cage_keys_text = "This cage is opened, you found the missing [b][color=#7332723]keyparts[/color][/b] go free the Tiger !"
+
+[node name="HUD" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="LifeBar" type="TextureRect" parent="HUD"]
+anchor_right = 1.0
+script = ExtResource( 2 )
+frames = SubResource( 1 )
+
+[node name="AmmoBar" type="TextureRect" parent="HUD"]
+margin_right = 1080.0
+margin_bottom = 1080.0
+script = ExtResource( 7 )
+frames = SubResource( 3 )
+
+[node name="PointsBar" type="TextureRect" parent="HUD"]
+margin_right = 1080.0
+margin_bottom = 1080.0
+script = ExtResource( 8 )
+frames = SubResource( 2 )
+
+[node name="banner_low" type="Control" parent="."]
+anchor_top = 0.786
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 0.119995
+theme = ExtResource( 38 )
+
+[node name="cage_text" type="Control" parent="banner_low"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -230.0
+script = ExtResource( 39 )
+is_active = true
+
+[node name="dragon" type="TextureRect" parent="banner_low/cage_text"]
+visible = false
+margin_left = 148.0
+margin_top = -752.0
+margin_right = 2068.0
+margin_bottom = 328.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 41 )
+
+[node name="color_rect" type="ColorRect" parent="banner_low/cage_text"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 272.0
+margin_top = 1.0
+margin_right = -374.0
+margin_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="rich_text_label" type="RichTextLabel" parent="banner_low/cage_text"]
+anchor_left = 0.158
+anchor_right = 0.789
+anchor_bottom = 0.887
+margin_left = 0.639984
+margin_top = 26.0
+margin_right = -0.880127
+margin_bottom = -0.0100098
+bbcode_enabled = true
+bbcode_text = "test"
+visible_characters = 0
+percent_visible = 0.0
+text = "test"
+
+[node name="animation_player" type="AnimationPlayer" parent="banner_low/cage_text"]
+root_node = NodePath("../../..")
+autoplay = "RESET"
+anims/RESET = SubResource( 4 )
+anims/fade_in = SubResource( 5 )
+anims/fade_out = SubResource( 6 )
+
+[node name="timer" type="Timer" parent="banner_low/cage_text"]
+one_shot = true
+
+[node name="texture_rect" type="TextureRect" parent="banner_low/cage_text"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -849.0
+margin_bottom = 1.0
+
+[node name="kirin" type="TextureRect" parent="banner_low/cage_text"]
+visible = false
+margin_left = 10.0
+margin_top = -475.0
+margin_right = 1930.0
+margin_bottom = 605.0
+texture = ExtResource( 40 )
+
+[connection signal="timeout" from="banner_low/cage_text/timer" to="banner_low/cage_text" method="_on_timer_timeout"]

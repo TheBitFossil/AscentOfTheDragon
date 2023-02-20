@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/ui/ammo_bar.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/ui/ammo_widget.gd" type="Script" id=3]
+
+[node name="AmmoBar" type="HBoxContainer"]
+margin_right = 5416.0
+margin_bottom = 1080.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AmmoWidget" parent="." instance=ExtResource( 1 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 1080.0
+margin_bottom = 1080.0
+
+[node name="AmmoWidget2" parent="." instance=ExtResource( 1 )]
+margin_left = 1084.0
+margin_top = 0.0
+margin_right = 2164.0
+margin_bottom = 1080.0
+
+[node name="AmmoWidget3" parent="." instance=ExtResource( 1 )]
+margin_left = 2168.0
+margin_top = 0.0
+margin_right = 3248.0
+margin_bottom = 1080.0
+
+[node name="AmmoWidget4" parent="." instance=ExtResource( 1 )]
+margin_left = 3252.0
+margin_top = 0.0
+margin_right = 4332.0
+margin_bottom = 1080.0
+
+[node name="AmmoWidget5" parent="." instance=ExtResource( 1 )]
+margin_left = 4336.0
+margin_top = 0.0
+margin_right = 5416.0
+margin_bottom = 1080.0

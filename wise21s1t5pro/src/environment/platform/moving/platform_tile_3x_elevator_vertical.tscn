@@ -1,0 +1,145 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://src/environment/platform/moving/elevator_button.gd" type="Script" id=1]
+[ext_resource path="res://assets/models3d/walkable/clouds/clouds_3x1.tscn" type="PackedScene" id=2]
+
+[sub_resource type="BoxShape" id=45]
+extents = Vector3( 0.923865, 0.878153, 1.46186 )
+
+[sub_resource type="BoxShape" id=46]
+extents = Vector3( 3.09692, 0.417958, 1 )
+
+[sub_resource type="Animation" id=47]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=22]
+resource_name = "idle_end"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 8, 0 ), Vector3( 22, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=23]
+resource_name = "idle_start"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 22, 9, 0 ) ]
+}
+
+[sub_resource type="Animation" id=49]
+resource_name = "move"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 8, 0 ) ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "move_to_end"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 0, 0 ), Vector3( 0, 8, 0 ) ]
+}
+
+[sub_resource type="Animation" id=48]
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 0, 8, 0 ), Vector3( 0, 0, 0 ) ]
+}
+
+[node name="Elevator_Vertical" type="Spatial"]
+
+[node name="3_Tile_Elevator_Vertical" type="KinematicBody" parent="."]
+collision_layer = 4
+collision_mask = 11
+motion/sync_to_physics = true
+script = ExtResource( 1 )
+
+[node name="clouds_3x1" parent="3_Tile_Elevator_Vertical" instance=ExtResource( 2 )]
+
+[node name="sign_left_right" parent="3_Tile_Elevator_Vertical/clouds_3x1" index="0"]
+visible = false
+
+[node name="ElevatorButton" type="Area" parent="3_Tile_Elevator_Vertical"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1.33635, -1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="3_Tile_Elevator_Vertical/ElevatorButton"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.78977, 1.97118 )
+shape = SubResource( 45 )
+
+[node name="CollisionShape" type="CollisionShape" parent="3_Tile_Elevator_Vertical"]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.194331, 0 )
+shape = SubResource( 46 )
+
+[node name="animation_player_elevator" type="AnimationPlayer" parent="3_Tile_Elevator_Vertical"]
+autoplay = "idle_start"
+playback_process_mode = 0
+anims/RESET = SubResource( 47 )
+anims/idle_end = SubResource( 22 )
+anims/idle_start = SubResource( 23 )
+anims/move = SubResource( 49 )
+anims/move_to_end = SubResource( 21 )
+anims/move_to_start = SubResource( 48 )
+
+[connection signal="animation_finished" from="3_Tile_Elevator_Vertical/clouds_3x1/animation_player_lever" to="3_Tile_Elevator_Vertical" method="_on_animation_player_lever_animation_finished"]
+[connection signal="body_entered" from="3_Tile_Elevator_Vertical/ElevatorButton" to="3_Tile_Elevator_Vertical" method="_on_ElevatorButton_body_entered"]
+[connection signal="body_exited" from="3_Tile_Elevator_Vertical/ElevatorButton" to="3_Tile_Elevator_Vertical" method="_on_ElevatorButton_body_exited"]
+[connection signal="animation_finished" from="3_Tile_Elevator_Vertical/animation_player_elevator" to="3_Tile_Elevator_Vertical" method="_on_animation_player_elevator_animation_finished"]
+
+[editable path="3_Tile_Elevator_Vertical/clouds_3x1"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/helper/detector/loot_detector.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=15]
+extents = Vector3( 0.762531, 0.675665, 0.568517 )
+
+[node name="loot_detector" type="Area"]
+collision_mask = 16
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68917, 0 )
+visible = false
+shape = SubResource( 15 )
+
+[connection signal="area_entered" from="." to="." method="_on_LootDetector_area_entered"]

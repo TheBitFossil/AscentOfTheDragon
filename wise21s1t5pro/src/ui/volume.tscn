@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/sprites/buttons/music_button.png" type="Texture" id=1]
+[ext_resource path="res://src/ui/volume.gd" type="Script" id=2]
+[ext_resource path="res://assets/sprites/buttons/music_button_off.png" type="Texture" id=3]
+[ext_resource path="res://src/audio/title_screen.wav" type="AudioStream" id=4]
+
+[node name="v_box_container" type="VBoxContainer"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 16.0
+margin_top = 324.0
+margin_right = 289.0
+margin_bottom = 486.0
+script = ExtResource( 2 )
+
+[node name="volume_button" type="TextureButton" parent="."]
+margin_right = 273.0
+margin_bottom = 126.0
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 3 )
+texture_hover = ExtResource( 3 )
+texture_focused = ExtResource( 3 )
+stretch_mode = 4
+
+[node name="h_slider" type="HSlider" parent="."]
+margin_top = 130.0
+margin_right = 200.0
+margin_bottom = 146.0
+size_flags_horizontal = 3
+min_value = -30.0
+max_value = 10.0
+rounded = true
+
+[node name="audio_stream_player" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+bus = "Theme"
+
+[connection signal="toggled" from="volume_button" to="." method="_on_volume_button_toggled"]
+[connection signal="value_changed" from="h_slider" to="." method="_on_h_slider_value_changed"]

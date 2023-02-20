@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/actors/player/player_health.gd" type="Script" id=1]
+[ext_resource path="res://src/audio/dragon_damage_1.wav" type="AudioStream" id=2]
+[ext_resource path="res://src/audio/dragon_damage_3.wav" type="AudioStream" id=3]
+[ext_resource path="res://src/audio/dragon_damage_2.wav" type="AudioStream" id=4]
+[ext_resource path="res://src/audio/dragon_death_v3.wav" type="AudioStream" id=5]
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 0.253037, 0.924898, 0.169599 )
+
+[node name="health_component" type="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0403742, 0.10879, 0 )
+collision_layer = 32
+collision_mask = 2
+script = ExtResource( 1 )
+max_health = 2
+hurt_sounds = [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 3 ) ]
+death_sound = ExtResource( 5 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.948932, 0 )
+shape = SubResource( 11 )
+
+[node name="audio_stream_player" type="AudioStreamPlayer" parent="."]
+bus = "Effects"

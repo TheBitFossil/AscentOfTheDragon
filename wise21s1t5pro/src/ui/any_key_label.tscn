@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("any_key_label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "pulsating"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("any_key_label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="any_key_label" type="Label"]
+anchor_right = 1.0
+margin_bottom = 14.0
+text = "Press Any Key"
+align = 1
+
+[node name="animation_player" type="AnimationPlayer" parent="."]
+root_node = NodePath("../..")
+autoplay = "pulsating"
+anims/RESET = SubResource( 1 )
+anims/pulsating = SubResource( 2 )

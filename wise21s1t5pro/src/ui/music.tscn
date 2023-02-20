@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/ui/music.gd" type="Script" id=1]
+[ext_resource path="res://assets/sprites/hud/volume.png" type="Texture" id=2]
+
+[node name="music" type="TextureRect"]
+margin_left = 7.0
+margin_top = 17.0
+margin_right = 650.0
+margin_bottom = 917.0
+rect_scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSlider" type="HSlider" parent="."]
+margin_left = 70.0
+margin_top = 809.999
+margin_right = 575.0
+margin_bottom = 884.999
+rect_scale = Vector2( 1, 2 )
+min_value = -30.0
+max_value = 10.0
+rounded = true
+
+[connection signal="value_changed" from="HSlider" to="." method="_on_HSlider_value_changed"]

@@ -1,0 +1,2891 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://assets/background/bg_02.jpg" type="Texture" id=1]
+[ext_resource path="res://assets/background/bg_01.jpg" type="Texture" id=2]
+[ext_resource path="res://src/environment/platform/libs/4_stone_line.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/environment/platform/libs/wall_boundary_tendril.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/environment/platform/libs/7_stone.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/environment/platform/libs/long_blocks.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/environment/platform/libs/2_grass.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/environment/platform/libs/stone_block.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/environment/platform/libs/4_block.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/environment/platform/libs/5_grass.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/environment/platform/libs/5_stone.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/environment/platform/libs/8_stone.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/environment/platform/libs/1_grass.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/environment/platform/libs/3_stone.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/environment/platform/libs/2_stone.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/environment/platform/libs/4_block_r.tscn" type="PackedScene" id=17]
+[ext_resource path="res://src/environment/platform/libs/5_block.tscn" type="PackedScene" id=18]
+[ext_resource path="res://src/environment/platform/libs/wall_platform_l.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/environment/platform/libs/6_stone.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/environment/platform/libs/4_grass.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/environment/platform/libs/wall_platform_r2.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/environment/platform/libs/7_grass.tscn" type="PackedScene" id=23]
+[ext_resource path="res://src/environment/platform/libs/1_stone.tscn" type="PackedScene" id=24]
+[ext_resource path="res://src/environment/platform/libs/4_stone.tscn" type="PackedScene" id=25]
+[ext_resource path="res://src/environment/platform/libs/wall_platform_r.tscn" type="PackedScene" id=26]
+[ext_resource path="res://src/environment/platform/libs/3_grass.tscn" type="PackedScene" id=27]
+[ext_resource path="res://src/environment/platform/libs/6_grass.tscn" type="PackedScene" id=28]
+[ext_resource path="res://src/environment/platform/libs/8_grass.tscn" type="PackedScene" id=29]
+[ext_resource path="res://src/environment/platform/libs/wall_boundary.tscn" type="PackedScene" id=30]
+[ext_resource path="res://src/environment/platform/libs/2_fyling_rocks.tscn" type="PackedScene" id=31]
+[ext_resource path="res://src/environment/platform/libs/1_flying_rocks.tscn" type="PackedScene" id=32]
+
+[node name="World" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.2, 0 )
+
+[node name="Background_L" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 40.5014, 16.0986, -2 )
+pixel_size = 0.0131
+texture = ExtResource( 2 )
+
+[node name="Background_R" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 120.27, 16.1188, -2 )
+pixel_size = 0.0131
+texture = ExtResource( 1 )
+
+[node name="Small_Platforms" type="Spatial" parent="."]
+
+[node name="4_Blocks_R9" parent="Small_Platforms" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 7, 0 )
+
+[node name="4_Blocks_R8" parent="Small_Platforms" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 14, 0 )
+
+[node name="4_Blocks_R4" parent="Small_Platforms" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 76.5, 28, 0 )
+
+[node name="4_Blocks_R11" parent="Small_Platforms" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 96, 3.5, 0 )
+
+[node name="4_Blocks_R6" parent="Small_Platforms" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 85, 18, 0 )
+
+[node name="4_Blocks_R5" parent="Small_Platforms" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 119.5, 20.5, 0 )
+
+[node name="4_Blocks_R12" parent="Small_Platforms" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 127.5, 8, 0 )
+
+[node name="4_Blocks_R3" parent="Small_Platforms" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 76.5, 3.5, 0 )
+
+[node name="4_Blocks_R2" parent="Small_Platforms" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 3, 0 )
+
+[node name="4_Blocks_R10" parent="Small_Platforms" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.5, 23, 0 )
+
+[node name="4_Blocks_R7" parent="Small_Platforms" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 16, 0 )
+
+[node name="4_Blocks3" parent="Small_Platforms" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 63.628, 15.5, 0 )
+
+[node name="4_Blocks6" parent="Small_Platforms" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 89.628, 24, 0 )
+
+[node name="4_Blocks9" parent="Small_Platforms" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 112.628, 6.5, 0 )
+
+[node name="4_Blocks11" parent="Small_Platforms" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 122.128, 12.5, 0 )
+
+[node name="4_Blocks12" parent="Small_Platforms" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 92.628, 13.5, 0 )
+
+[node name="4_Blocks13" parent="Small_Platforms" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 98.628, 22.5, 0 )
+
+[node name="4_Blocks14" parent="Small_Platforms" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 123.128, 30.5, 0 )
+
+[node name="4_Blocks15" parent="Small_Platforms" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 112.128, 25, 0 )
+
+[node name="4_Blocks16" parent="Small_Platforms" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 126.128, 26, 0 )
+
+[node name="4_Blocks10" parent="Small_Platforms" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 138.628, 11.5, 0 )
+
+[node name="4_Blocks4" parent="Small_Platforms" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 70.628, 18, 0 )
+
+[node name="4_Blocks5" parent="Small_Platforms" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 78.628, 18, 0 )
+
+[node name="4_Blocks7" parent="Small_Platforms" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 6.5, 0 )
+
+[node name="4_Blocks_R13" parent="Small_Platforms" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 139.5, 6, 0 )
+
+[node name="4_Blocks_R14" parent="Small_Platforms" instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 111.5, 11, 0 )
+
+[node name="Medium_Platforms" type="Spatial" parent="."]
+
+[node name="5_Blocks7" parent="Medium_Platforms" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.106, 22, 0 )
+
+[node name="5_Blocks10" parent="Medium_Platforms" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.106, 22, 0 )
+
+[node name="5_Blocks17" parent="Medium_Platforms" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.606, 14, 0 )
+
+[node name="5_Blocks12" parent="Medium_Platforms" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.606, 21, 0 )
+
+[node name="5_Blocks4" parent="Medium_Platforms" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.606, 19, 0 )
+
+[node name="5_Blocks6" parent="Medium_Platforms" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.006, 6.5, 0 )
+
+[node name="5_Blocks8" parent="Medium_Platforms" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.006, 3, 0 )
+
+[node name="5_Blocks13" parent="Medium_Platforms" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 56.106, 5, 0 )
+
+[node name="5_Blocks14" parent="Medium_Platforms" instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 66.606, 3.5, 0 )
+
+[node name="Long_Platforms" type="Spatial" parent="."]
+
+[node name="Long_Blocks3" parent="Long_Platforms" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 21, 0 )
+
+[node name="Long_Blocks21" parent="Long_Platforms" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 21, 0 )
+
+[node name="Long_Blocks5" parent="Long_Platforms" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 10, 0 )
+
+[node name="Long_Blocks6" parent="Long_Platforms" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 55.5, 25, 0 )
+
+[node name="Long_Blocks7" parent="Long_Platforms" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 77, 24.5, 0 )
+
+[node name="Long_Blocks11" parent="Long_Platforms" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 11, 0 )
+
+[node name="Long_Blocks12" parent="Long_Platforms" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 10.5, 0 )
+
+[node name="Long_Blocks8" parent="Long_Platforms" instance=ExtResource( 6 )]
+transform = Transform( 1, -0.000279253, 0, 0.000279253, 1, 0, 0, 0, 1, 71.5, 3.5, 0 )
+
+[node name="Long_Blocks10" parent="Long_Platforms" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 86, 7.5, 0 )
+
+[node name="Platforms_Left" type="Spatial" parent="."]
+
+[node name="Wall_Platform_L" parent="Platforms_Left" instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2, 0 )
+
+[node name="Wall_Platform_R2" parent="Platforms_Left" instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49, 1, 0 )
+
+[node name="Wall_Platform_R3" parent="Platforms_Left" instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 57, 12, 0 )
+
+[node name="Wall_Platform_R4" parent="Platforms_Left" instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 121.5, 26, 0 )
+
+[node name="Wall_Platform_R7" parent="Platforms_Left" instance=ExtResource( 22 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 106, 6, 0 )
+
+[node name="Platforms_Right" type="Spatial" parent="."]
+
+[node name="Wall_Platform_R" parent="Platforms_Right" instance=ExtResource( 26 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 77, 12.5, 0 )
+
+[node name="Wall_Platform_R4" parent="Platforms_Right" instance=ExtResource( 26 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 43.5, 11, 0 )
+
+[node name="Wall_Platform_R6" parent="Platforms_Right" instance=ExtResource( 26 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 129.5, 20.5, 0 )
+
+[node name="Wall_Platform_R8" parent="Platforms_Right" instance=ExtResource( 26 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 129.5, 30.5, 0 )
+
+[node name="Wall_Platform_R5" parent="Platforms_Right" instance=ExtResource( 26 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 68.5, 27, 0 )
+
+[node name="Wall_Platform_R7" parent="Platforms_Right" instance=ExtResource( 26 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 140.5, 21.5, 0 )
+
+[node name="Walls" type="Spatial" parent="."]
+
+[node name="Wall_boundary_tendril" parent="Walls" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
+
+[node name="Wall_boundary_tendril3" parent="Walls" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 9, 0 )
+
+[node name="Wall_boundary_tendril4" parent="Walls" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 15, 0 )
+
+[node name="Wall_Left_Boundary2" parent="Walls" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 15, 0 )
+
+[node name="Wall_Left_Boundary4" parent="Walls" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 15, 0 )
+
+[node name="Wall_boundary_tendril5" parent="Walls" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 21, 0 )
+
+[node name="Wall_boundary_tendril6" parent="Walls" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 13, 0 )
+
+[node name="Wall_boundary_tendril9" parent="Walls" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 10, 0 )
+
+[node name="Wall_boundary_tendril8" parent="Walls" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 11, 0 )
+
+[node name="Wall_Left_Boundary3" parent="Walls" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 18, 0 )
+
+[node name="Wall_boundary_tendril7" parent="Walls" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 26, 0 )
+
+[node name="Wall_Left_Boundary6" parent="Walls" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 24, 0 )
+
+[node name="Stone_Block" parent="Walls" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 77, 8.5, 0 )
+
+[node name="Stone_Block2" parent="Walls" instance=ExtResource( 8 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -4, 0 )
+
+[node name="Walls2" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 10, 0 )
+
+[node name="Wall_boundary_tendril3" parent="Walls2" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 8, 0 )
+
+[node name="Wall_boundary_tendril4" parent="Walls2" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5, 6, 0 )
+
+[node name="Wall_Left_Boundary4" parent="Walls2" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2, 0 )
+
+[node name="Wall_boundary_tendril6" parent="Walls2" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 8, 0 )
+
+[node name="Wall_Left_Boundary5" parent="Walls2" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, 0 )
+
+[node name="Walls3" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36, 10, 0 )
+
+[node name="Wall_Left_Boundary4" parent="Walls3" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 3, 0 )
+
+[node name="Wall_Left_Boundary6" parent="Walls3" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 3, 0 )
+
+[node name="Wall_Left_Boundary10" parent="Walls3" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 1, 0 )
+
+[node name="Wall_Left_Boundary7" parent="Walls3" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32.5, 3, 0 )
+
+[node name="Wall_Left_Boundary9" parent="Walls3" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5, 5, 0 )
+
+[node name="Wall_boundary_tendril3" parent="Walls3" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 10, 0 )
+
+[node name="Wall_boundary_tendril4" parent="Walls3" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 6, 0 )
+
+[node name="Wall_Left_Boundary2" parent="Walls3" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 8, 0 )
+
+[node name="Wall_Left_Boundary8" parent="Walls3" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -34, -6, 0 )
+
+[node name="Wall_Left_Boundary5" parent="Walls3" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 105.5, 13.5, 0 )
+
+[node name="Walls4" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 4, 0 )
+
+[node name="Wall_boundary_tendril" parent="Walls4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 3, 0 )
+
+[node name="Wall_Left_Boundary" parent="Walls4" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 0 )
+
+[node name="Wall_boundary_tendril2" parent="Walls4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -1, 0 )
+
+[node name="Wall_boundary_tendril4" parent="Walls4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 5, 0 )
+
+[node name="Wall_boundary_tendril5" parent="Walls4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 14, 0 )
+
+[node name="Wall_Left_Boundary3" parent="Walls4" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5, 12, 0 )
+
+[node name="Wall_boundary_tendril6" parent="Walls4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.5, 3.5, 0 )
+
+[node name="Wall_Left_Boundary4" parent="Walls4" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 1.5, 0 )
+
+[node name="Wall_boundary_tendril7" parent="Walls4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99.5, 15.5, 0 )
+
+[node name="Wall_Left_Boundary5" parent="Walls4" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 100.5, 22.5, 0 )
+
+[node name="Walls5" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 53.5, 9, 0 )
+
+[node name="Wall_Left_Boundary" parent="Walls5" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 0, 0 )
+
+[node name="Wall_boundary_tendril2" parent="Walls5" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 0 )
+
+[node name="Wall_boundary_tendril3" parent="Walls5" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 15, 0 )
+
+[node name="Wall_Left_Boundary2" parent="Walls5" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 13, 0 )
+
+[node name="Wall_boundary_tendril6" parent="Walls5" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 11, 0 )
+
+[node name="Wall_boundary_tendril4" parent="Walls5" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 5, 0 )
+
+[node name="Wall_boundary_tendril5" parent="Walls5" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 9, 0 )
+
+[node name="Wall_Left_Boundary3" parent="Walls5" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 7, 0 )
+
+[node name="Walls6" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134, 22.5, 0 )
+
+[node name="Wall_Left_Boundary3" parent="Walls6" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 4, 0 )
+
+[node name="Walls7" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 124, 24, 0 )
+
+[node name="Wall_boundary_tendril" parent="Walls7" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 2.5, 0 )
+
+[node name="Wall_Left_Boundary" parent="Walls7" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0.5, 0 )
+
+[node name="Wall_boundary_tendril2" parent="Walls7" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, -1.5, 0 )
+
+[node name="Wall_boundary_tendril4" parent="Walls7" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 4.5, 0 )
+
+[node name="Wall_boundary_tendril5" parent="Walls7" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 10.5, 0 )
+
+[node name="Wall_Left_Boundary3" parent="Walls7" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 8.5, 0 )
+
+[node name="Wall_Left_Boundary6" parent="Walls7" instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, -17, 0 )
+
+[node name="Walls8" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 162.5, 25, 0 )
+
+[node name="Stone_Line" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 6, 0 )
+
+[node name="4_Stone_Line" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
+
+[node name="4_Stone_Line2" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -1, 0 )
+
+[node name="4_Stone_Line3" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0 )
+
+[node name="4_Stone_Line4" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 1, 0 )
+
+[node name="4_Stone_Line5" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 14, 0 )
+
+[node name="4_Stone_Line9" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 7, 0 )
+
+[node name="4_Stone_Line18" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 7, 0 )
+
+[node name="4_Stone_Line19" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48, -6, 0 )
+
+[node name="4_Stone_Line21" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 126, -7, 0 )
+
+[node name="4_Stone_Line22" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 122, -7, 0 )
+
+[node name="4_Stone_Line23" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 124, -5, 0 )
+
+[node name="4_Stone_Line28" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 130.5, 30.5, 0 )
+
+[node name="4_Stone_Line29" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134.5, 30.5, 0 )
+
+[node name="4_Stone_Line30" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 138.5, 30.5, 0 )
+
+[node name="4_Stone_Line31" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 139.5, 29.5, 0 )
+
+[node name="4_Stone_Line36" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 163.5, 29.5, 0 )
+
+[node name="4_Stone_Line43" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 155.5, 29.5, 0 )
+
+[node name="4_Stone_Line54" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 159.5, 29.5, 0 )
+
+[node name="4_Stone_Line56" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 159.5, 19.5, 0 )
+
+[node name="4_Stone_Line57" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 159.5, 20.5, 0 )
+
+[node name="4_Stone_Line58" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 160, 21.5, 0 )
+
+[node name="4_Stone_Line59" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 163.5, 22.5, 0 )
+
+[node name="4_Stone_Line60" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 163.5, 23.5, 0 )
+
+[node name="4_Stone_Line61" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 164.5, 24.5, 0 )
+
+[node name="4_Stone_Line157" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 164, 25.5, 0 )
+
+[node name="4_Stone_Line158" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 164.5, 26.5, 0 )
+
+[node name="4_Stone_Line159" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 165.5, 27.5, 0 )
+
+[node name="4_Stone_Line160" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 162.5, 28.5, 0 )
+
+[node name="4_Stone_Line37" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 131.5, 29.5, 0 )
+
+[node name="4_Stone_Line39" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 150.5, 30.5, 0 )
+
+[node name="4_Stone_Line42" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 154.5, 30.5, 0 )
+
+[node name="4_Stone_Line55" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 159.5, 30.5, 0 )
+
+[node name="4_Stone_Line32" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135.5, 29.5, 0 )
+
+[node name="4_Stone_Line40" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135.5, 29.5, 0 )
+
+[node name="4_Stone_Line24" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 125.5, -4, 0 )
+
+[node name="4_Stone_Line44" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 138.5, 11.5, 0 )
+
+[node name="4_Stone_Line45" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 149.5, 21.5, 0 )
+
+[node name="4_Stone_Line62" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 162, 11, 0 )
+
+[node name="4_Stone_Line63" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 166, 11, 0 )
+
+[node name="4_Stone_Line64" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 170, 11, 0 )
+
+[node name="4_Stone_Line65" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174, 11, 0 )
+
+[node name="4_Stone_Line66" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 162, 10, 0 )
+
+[node name="4_Stone_Line67" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 166, 10, 0 )
+
+[node name="4_Stone_Line68" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 170, 10, 0 )
+
+[node name="4_Stone_Line69" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174, 10, 0 )
+
+[node name="4_Stone_Line70" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 162, 9, 0 )
+
+[node name="4_Stone_Line71" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 166, 9, 0 )
+
+[node name="4_Stone_Line72" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 170, 9, 0 )
+
+[node name="4_Stone_Line73" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174, 9, 0 )
+
+[node name="4_Stone_Line74" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 163, 8, 0 )
+
+[node name="4_Stone_Line154" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 159, 8, 0 )
+
+[node name="4_Stone_Line75" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 167, 8, 0 )
+
+[node name="4_Stone_Line76" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 171, 8, 0 )
+
+[node name="4_Stone_Line77" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 175, 8, 0 )
+
+[node name="4_Stone_Line78" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 162, 7, 0 )
+
+[node name="4_Stone_Line79" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 166, 7, 0 )
+
+[node name="4_Stone_Line80" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 170, 7, 0 )
+
+[node name="4_Stone_Line81" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174, 7, 0 )
+
+[node name="4_Stone_Line82" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 162, 6, 0 )
+
+[node name="4_Stone_Line83" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 166, 6, 0 )
+
+[node name="4_Stone_Line84" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 170, 6, 0 )
+
+[node name="4_Stone_Line85" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174, 6, 0 )
+
+[node name="4_Stone_Line86" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 162, 5, 0 )
+
+[node name="4_Stone_Line87" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 166, 5, 0 )
+
+[node name="4_Stone_Line88" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 170, 5, 0 )
+
+[node name="4_Stone_Line89" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174, 5, 0 )
+
+[node name="4_Stone_Line161" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 39.5, 0 )
+
+[node name="4_Stone_Line162" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 139, 39.5, 0 )
+
+[node name="4_Stone_Line163" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 143, 39.5, 0 )
+
+[node name="4_Stone_Line164" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 38.5, 0 )
+
+[node name="4_Stone_Line165" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 139, 38.5, 0 )
+
+[node name="4_Stone_Line166" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 143, 38.5, 0 )
+
+[node name="4_Stone_Line167" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 37.5, 0 )
+
+[node name="4_Stone_Line168" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 139, 37.5, 0 )
+
+[node name="4_Stone_Line169" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 143, 37.5, 0 )
+
+[node name="4_Stone_Line170" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 136, 32.5, 0 )
+
+[node name="4_Stone_Line231" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 136, 31.5, 0 )
+
+[node name="4_Stone_Line232" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 140, 31.5, 0 )
+
+[node name="4_Stone_Line233" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 151, 31.5, 0 )
+
+[node name="4_Stone_Line234" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 155, 31.5, 0 )
+
+[node name="4_Stone_Line235" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 159, 31.5, 0 )
+
+[node name="4_Stone_Line236" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 159, 33.5, 0 )
+
+[node name="4_Stone_Line237" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 159, 34.5, 0 )
+
+[node name="4_Stone_Line238" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 159, 35.5, 0 )
+
+[node name="4_Stone_Line239" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 159, 37.5, 0 )
+
+[node name="4_Stone_Line240" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 159, 38.5, 0 )
+
+[node name="4_Stone_Line241" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 159, 39.5, 0 )
+
+[node name="4_Stone_Line225" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 140, 32.5, 0 )
+
+[node name="4_Stone_Line226" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 144, 32.5, 0 )
+
+[node name="4_Stone_Line227" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 148, 32.5, 0 )
+
+[node name="4_Stone_Line228" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 152, 32.5, 0 )
+
+[node name="4_Stone_Line229" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 156, 32.5, 0 )
+
+[node name="4_Stone_Line230" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 160, 32.5, 0 )
+
+[node name="4_Stone_Line171" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 136, 36.5, 0 )
+
+[node name="4_Stone_Line172" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 140, 36.5, 0 )
+
+[node name="4_Stone_Line173" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 144, 36.5, 0 )
+
+[node name="4_Stone_Line174" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 35.5, 0 )
+
+[node name="4_Stone_Line175" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 139, 35.5, 0 )
+
+[node name="4_Stone_Line176" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 143, 35.5, 0 )
+
+[node name="4_Stone_Line177" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 34.5, 0 )
+
+[node name="4_Stone_Line178" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 139, 34.5, 0 )
+
+[node name="4_Stone_Line179" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 143, 34.5, 0 )
+
+[node name="4_Stone_Line180" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 33.5, 0 )
+
+[node name="4_Stone_Line181" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 139, 33.5, 0 )
+
+[node name="4_Stone_Line182" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 143, 33.5, 0 )
+
+[node name="4_Stone_Line183" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 147, 39.5, 0 )
+
+[node name="4_Stone_Line184" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 151, 39.5, 0 )
+
+[node name="4_Stone_Line185" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 155, 39.5, 0 )
+
+[node name="4_Stone_Line186" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 147, 38.5, 0 )
+
+[node name="4_Stone_Line187" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 151, 38.5, 0 )
+
+[node name="4_Stone_Line188" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 155, 38.5, 0 )
+
+[node name="4_Stone_Line189" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 147, 37.5, 0 )
+
+[node name="4_Stone_Line190" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 151, 37.5, 0 )
+
+[node name="4_Stone_Line191" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 155, 37.5, 0 )
+
+[node name="4_Stone_Line192" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 148, 36.5, 0 )
+
+[node name="4_Stone_Line193" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 152, 36.5, 0 )
+
+[node name="4_Stone_Line194" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 156, 36.5, 0 )
+
+[node name="4_Stone_Line195" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 147, 35.5, 0 )
+
+[node name="4_Stone_Line196" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 151, 35.5, 0 )
+
+[node name="4_Stone_Line197" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 155, 35.5, 0 )
+
+[node name="4_Stone_Line198" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 147, 34.5, 0 )
+
+[node name="4_Stone_Line199" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 151, 34.5, 0 )
+
+[node name="4_Stone_Line200" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 155, 34.5, 0 )
+
+[node name="4_Stone_Line201" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 147, 33.5, 0 )
+
+[node name="4_Stone_Line202" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 151, 33.5, 0 )
+
+[node name="4_Stone_Line203" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 155, 33.5, 0 )
+
+[node name="4_Stone_Line204" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 163, 39.5, 0 )
+
+[node name="4_Stone_Line205" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 167, 39.5, 0 )
+
+[node name="4_Stone_Line206" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 171, 39.5, 0 )
+
+[node name="4_Stone_Line207" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 163, 38.5, 0 )
+
+[node name="4_Stone_Line208" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 167, 38.5, 0 )
+
+[node name="4_Stone_Line209" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 171, 38.5, 0 )
+
+[node name="4_Stone_Line210" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 163, 37.5, 0 )
+
+[node name="4_Stone_Line211" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 167, 37.5, 0 )
+
+[node name="4_Stone_Line212" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 171, 37.5, 0 )
+
+[node name="4_Stone_Line213" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 164, 36.5, 0 )
+
+[node name="4_Stone_Line214" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 168, 36.5, 0 )
+
+[node name="4_Stone_Line215" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 172, 36.5, 0 )
+
+[node name="4_Stone_Line242" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 160, 36.5, 0 )
+
+[node name="4_Stone_Line216" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 163, 35.5, 0 )
+
+[node name="4_Stone_Line217" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 167, 35.5, 0 )
+
+[node name="4_Stone_Line218" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 171, 35.5, 0 )
+
+[node name="4_Stone_Line219" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 163, 34.5, 0 )
+
+[node name="4_Stone_Line220" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 167, 34.5, 0 )
+
+[node name="4_Stone_Line221" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 171, 34.5, 0 )
+
+[node name="4_Stone_Line222" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 163, 33.5, 0 )
+
+[node name="4_Stone_Line223" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 167, 33.5, 0 )
+
+[node name="4_Stone_Line224" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 171, 33.5, 0 )
+
+[node name="4_Stone_Line243" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 164, 32.5, 0 )
+
+[node name="4_Stone_Line244" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 168, 32.5, 0 )
+
+[node name="4_Stone_Line245" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 172, 32.5, 0 )
+
+[node name="4_Stone_Line295" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 39.5, 0 )
+
+[node name="4_Stone_Line297" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 38.5, 0 )
+
+[node name="4_Stone_Line299" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 37.5, 0 )
+
+[node name="4_Stone_Line302" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 132, 36.5, 0 )
+
+[node name="4_Stone_Line304" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 35.5, 0 )
+
+[node name="4_Stone_Line306" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 34.5, 0 )
+
+[node name="4_Stone_Line308" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 33.5, 0 )
+
+[node name="4_Stone_Line311" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 132, 32.5, 0 )
+
+[node name="4_Stone_Line312" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 132, 31.5, 0 )
+
+[node name="4_Stone_Line246" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 163, 31.5, 0 )
+
+[node name="4_Stone_Line247" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 167, 31.5, 0 )
+
+[node name="4_Stone_Line248" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 171, 31.5, 0 )
+
+[node name="4_Stone_Line249" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 163.5, 30.5, 0 )
+
+[node name="4_Stone_Line250" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 167.5, 30.5, 0 )
+
+[node name="4_Stone_Line251" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 171.5, 30.5, 0 )
+
+[node name="4_Stone_Line252" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 167.5, 29.5, 0 )
+
+[node name="4_Stone_Line253" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 171.5, 29.5, 0 )
+
+[node name="4_Stone_Line254" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 175.5, 29.5, 0 )
+
+[node name="4_Stone_Line255" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 166.5, 28.5, 0 )
+
+[node name="4_Stone_Line256" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 170.5, 28.5, 0 )
+
+[node name="4_Stone_Line257" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174.5, 28.5, 0 )
+
+[node name="4_Stone_Line258" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 169.5, 27.5, 0 )
+
+[node name="4_Stone_Line259" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 173.5, 27.5, 0 )
+
+[node name="4_Stone_Line260" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 177.5, 27.5, 0 )
+
+[node name="4_Stone_Line261" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 168.5, 26.5, 0 )
+
+[node name="4_Stone_Line262" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 172.5, 26.5, 0 )
+
+[node name="4_Stone_Line263" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 176.5, 26.5, 0 )
+
+[node name="4_Stone_Line264" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 168, 25.5, 0 )
+
+[node name="4_Stone_Line265" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 172, 25.5, 0 )
+
+[node name="4_Stone_Line266" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 176, 25.5, 0 )
+
+[node name="4_Stone_Line267" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 168.5, 24.5, 0 )
+
+[node name="4_Stone_Line268" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 172.5, 24.5, 0 )
+
+[node name="4_Stone_Line269" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 176.5, 24.5, 0 )
+
+[node name="4_Stone_Line270" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 167.5, 23.5, 0 )
+
+[node name="4_Stone_Line271" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 171.5, 23.5, 0 )
+
+[node name="4_Stone_Line272" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 175.5, 23.5, 0 )
+
+[node name="4_Stone_Line273" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 167.5, 22.5, 0 )
+
+[node name="4_Stone_Line274" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 171.5, 22.5, 0 )
+
+[node name="4_Stone_Line275" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 175.5, 22.5, 0 )
+
+[node name="4_Stone_Line276" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 164, 21.5, 0 )
+
+[node name="4_Stone_Line277" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 168, 21.5, 0 )
+
+[node name="4_Stone_Line278" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 172, 21.5, 0 )
+
+[node name="4_Stone_Line279" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 163.5, 20.5, 0 )
+
+[node name="4_Stone_Line280" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 167.5, 20.5, 0 )
+
+[node name="4_Stone_Line281" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 171.5, 20.5, 0 )
+
+[node name="4_Stone_Line282" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 163.5, 19.5, 0 )
+
+[node name="4_Stone_Line283" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 167.5, 19.5, 0 )
+
+[node name="4_Stone_Line284" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 171.5, 19.5, 0 )
+
+[node name="4_Stone_Line285" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 175.5, 19.5, 0 )
+
+[node name="4_Stone_Line286" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 179.5, 19.5, 0 )
+
+[node name="4_Stone_Line287" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 183.5, 19.5, 0 )
+
+[node name="4_Stone_Line301" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 157.5, 17.5, 0 )
+
+[node name="4_Stone_Line303" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 160.5, 18.5, 0 )
+
+[node name="4_Stone_Line305" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 164.5, 18.5, 0 )
+
+[node name="4_Stone_Line307" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 170.5, 18.5, 0 )
+
+[node name="4_Stone_Line309" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174.5, 18.5, 0 )
+
+[node name="4_Stone_Line310" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 178.5, 18.5, 0 )
+
+[node name="4_Stone_Line313" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 182.5, 18.5, 0 )
+
+[node name="4_Stone_Line288" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 175.5, 20.5, 0 )
+
+[node name="4_Stone_Line289" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 179.5, 20.5, 0 )
+
+[node name="4_Stone_Line290" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 183.5, 20.5, 0 )
+
+[node name="4_Stone_Line291" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 176, 21.5, 0 )
+
+[node name="4_Stone_Line292" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 180, 21.5, 0 )
+
+[node name="4_Stone_Line293" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 184, 21.5, 0 )
+
+[node name="4_Stone_Line294" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 179.5, 22.5, 0 )
+
+[node name="4_Stone_Line296" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 183.5, 22.5, 0 )
+
+[node name="4_Stone_Line298" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 179.5, 23.5, 0 )
+
+[node name="4_Stone_Line300" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 183.5, 23.5, 0 )
+
+[node name="4_Stone_Line90" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 162, 4, 0 )
+
+[node name="4_Stone_Line91" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 166, 4, 0 )
+
+[node name="4_Stone_Line92" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 170, 4, 0 )
+
+[node name="4_Stone_Line93" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174, 4, 0 )
+
+[node name="4_Stone_Line94" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 161.5, 3, 0 )
+
+[node name="4_Stone_Line95" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 165.5, 3, 0 )
+
+[node name="4_Stone_Line96" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 169.5, 3, 0 )
+
+[node name="4_Stone_Line97" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 173.5, 3, 0 )
+
+[node name="4_Stone_Line98" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 162.5, 2, 0 )
+
+[node name="4_Stone_Line99" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 166.5, 2, 0 )
+
+[node name="4_Stone_Line100" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 170.5, 2, 0 )
+
+[node name="4_Stone_Line101" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174.5, 2, 0 )
+
+[node name="4_Stone_Line155" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 158.5, 2, 0 )
+
+[node name="4_Stone_Line102" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 161.5, 1, 0 )
+
+[node name="4_Stone_Line103" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 165.5, 1, 0 )
+
+[node name="4_Stone_Line104" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 169.5, 1, 0 )
+
+[node name="4_Stone_Line105" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 173.5, 1, 0 )
+
+[node name="4_Stone_Line106" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 163, 9.53674e-07, 0 )
+
+[node name="4_Stone_Line107" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 167, 9.53674e-07, 0 )
+
+[node name="4_Stone_Line108" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 171, 9.53674e-07, 0 )
+
+[node name="4_Stone_Line109" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 175, 9.53674e-07, 0 )
+
+[node name="4_Stone_Line110" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 164, -0.999999, 0 )
+
+[node name="4_Stone_Line111" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 168, -0.999999, 0 )
+
+[node name="4_Stone_Line112" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 172, -0.999999, 0 )
+
+[node name="4_Stone_Line156" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 158.5, -4, 0 )
+
+[node name="4_Stone_Line113" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 176, -0.999999, 0 )
+
+[node name="4_Stone_Line114" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 165, -2, 0 )
+
+[node name="4_Stone_Line115" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 169, -2, 0 )
+
+[node name="4_Stone_Line116" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 173, -2, 0 )
+
+[node name="4_Stone_Line117" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 177, -2, 0 )
+
+[node name="4_Stone_Line118" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 165, -3, 0 )
+
+[node name="4_Stone_Line119" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 169, -3, 0 )
+
+[node name="4_Stone_Line120" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 173, -3, 0 )
+
+[node name="4_Stone_Line121" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 177, -3, 0 )
+
+[node name="4_Stone_Line122" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 162.5, -4, 0 )
+
+[node name="4_Stone_Line123" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 166.5, -4, 0 )
+
+[node name="4_Stone_Line124" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 170.5, -4, 0 )
+
+[node name="4_Stone_Line125" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174.5, -4, 0 )
+
+[node name="4_Stone_Line126" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 161, -5, 0 )
+
+[node name="4_Stone_Line127" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 165, -5, 0 )
+
+[node name="4_Stone_Line128" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 169, -5, 0 )
+
+[node name="4_Stone_Line129" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 173, -5, 0 )
+
+[node name="4_Stone_Line130" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 161, -6, 0 )
+
+[node name="4_Stone_Line131" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 165, -6, 0 )
+
+[node name="4_Stone_Line132" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 169, -6, 0 )
+
+[node name="4_Stone_Line133" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 173, -6, 0 )
+
+[node name="4_Stone_Line134" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 161, -7, 0 )
+
+[node name="4_Stone_Line135" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 165, -7, 0 )
+
+[node name="4_Stone_Line136" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 169, -7, 0 )
+
+[node name="4_Stone_Line137" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 173, -7, 0 )
+
+[node name="4_Stone_Line138" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 162, -8, 0 )
+
+[node name="4_Stone_Line139" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 166, -8, 0 )
+
+[node name="4_Stone_Line140" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 170, -8, 0 )
+
+[node name="4_Stone_Line141" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174, -8, 0 )
+
+[node name="4_Stone_Line142" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 162, -9, 0 )
+
+[node name="4_Stone_Line143" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 166, -9, 0 )
+
+[node name="4_Stone_Line144" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 170, -9, 0 )
+
+[node name="4_Stone_Line145" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174, -9, 0 )
+
+[node name="4_Stone_Line146" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 162, -10, 0 )
+
+[node name="4_Stone_Line147" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 166, -10, 0 )
+
+[node name="4_Stone_Line148" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 170, -10, 0 )
+
+[node name="4_Stone_Line149" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174, -10, 0 )
+
+[node name="4_Stone_Line150" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 161.5, -11, 0 )
+
+[node name="4_Stone_Line151" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 165.5, -11, 0 )
+
+[node name="4_Stone_Line152" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 169.5, -11, 0 )
+
+[node name="4_Stone_Line153" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 173.5, -11, 0 )
+
+[node name="4_Stone_Line314" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 145.5, -11, 0 )
+
+[node name="4_Stone_Line315" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 149.5, -11, 0 )
+
+[node name="4_Stone_Line316" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 153.5, -11, 0 )
+
+[node name="4_Stone_Line317" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 157.5, -11, 0 )
+
+[node name="4_Stone_Line318" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 129.5, -11, 0 )
+
+[node name="4_Stone_Line319" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 133.5, -11, 0 )
+
+[node name="4_Stone_Line320" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 137.5, -11, 0 )
+
+[node name="4_Stone_Line321" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 141.5, -11, 0 )
+
+[node name="4_Stone_Line322" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 162.5, -12, 0 )
+
+[node name="4_Stone_Line323" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 166.5, -12, 0 )
+
+[node name="4_Stone_Line324" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 170.5, -12, 0 )
+
+[node name="4_Stone_Line325" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174.5, -12, 0 )
+
+[node name="4_Stone_Line327" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 146.5, -12, 0 )
+
+[node name="4_Stone_Line329" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 150.5, -12, 0 )
+
+[node name="4_Stone_Line330" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 154.5, -12, 0 )
+
+[node name="4_Stone_Line331" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 158.5, -12, 0 )
+
+[node name="4_Stone_Line332" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 130.5, -12, 0 )
+
+[node name="4_Stone_Line333" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134.5, -12, 0 )
+
+[node name="4_Stone_Line334" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 138.5, -12, 0 )
+
+[node name="4_Stone_Line335" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 142.5, -12, 0 )
+
+[node name="4_Stone_Line336" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 161.5, -13, 0 )
+
+[node name="4_Stone_Line337" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 165.5, -13, 0 )
+
+[node name="4_Stone_Line338" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 169.5, -13, 0 )
+
+[node name="4_Stone_Line339" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 173.5, -13, 0 )
+
+[node name="4_Stone_Line340" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 145.5, -13, 0 )
+
+[node name="4_Stone_Line341" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 149.5, -13, 0 )
+
+[node name="4_Stone_Line342" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 153.5, -13, 0 )
+
+[node name="4_Stone_Line343" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 157.5, -13, 0 )
+
+[node name="4_Stone_Line344" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 129.5, -13, 0 )
+
+[node name="4_Stone_Line345" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 133.5, -13, 0 )
+
+[node name="4_Stone_Line346" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 137.5, -13, 0 )
+
+[node name="4_Stone_Line347" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 141.5, -13, 0 )
+
+[node name="4_Stone_Line348" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 161.5, -14, 0 )
+
+[node name="4_Stone_Line349" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 165.5, -14, 0 )
+
+[node name="4_Stone_Line350" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 169.5, -14, 0 )
+
+[node name="4_Stone_Line351" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 173.5, -14, 0 )
+
+[node name="4_Stone_Line352" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 145.5, -14, 0 )
+
+[node name="4_Stone_Line353" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 149.5, -14, 0 )
+
+[node name="4_Stone_Line354" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 153.5, -14, 0 )
+
+[node name="4_Stone_Line355" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 157.5, -14, 0 )
+
+[node name="4_Stone_Line356" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 129.5, -14, 0 )
+
+[node name="4_Stone_Line357" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 133.5, -14, 0 )
+
+[node name="4_Stone_Line358" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 137.5, -14, 0 )
+
+[node name="4_Stone_Line359" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 141.5, -14, 0 )
+
+[node name="4_Stone_Line360" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 162.5, -15, 0 )
+
+[node name="4_Stone_Line361" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 166.5, -15, 0 )
+
+[node name="4_Stone_Line362" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 170.5, -15, 0 )
+
+[node name="4_Stone_Line363" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174.5, -15, 0 )
+
+[node name="4_Stone_Line364" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 146.5, -15, 0 )
+
+[node name="4_Stone_Line365" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 150.5, -15, 0 )
+
+[node name="4_Stone_Line366" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 154.5, -15, 0 )
+
+[node name="4_Stone_Line367" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 158.5, -15, 0 )
+
+[node name="4_Stone_Line368" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 130.5, -15, 0 )
+
+[node name="4_Stone_Line369" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134.5, -15, 0 )
+
+[node name="4_Stone_Line370" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 138.5, -15, 0 )
+
+[node name="4_Stone_Line371" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 142.5, -15, 0 )
+
+[node name="4_Stone_Line372" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 162.5, -16, 0 )
+
+[node name="4_Stone_Line373" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 166.5, -16, 0 )
+
+[node name="4_Stone_Line374" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 170.5, -16, 0 )
+
+[node name="4_Stone_Line375" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174.5, -16, 0 )
+
+[node name="4_Stone_Line376" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 146.5, -16, 0 )
+
+[node name="4_Stone_Line377" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 150.5, -16, 0 )
+
+[node name="4_Stone_Line378" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 154.5, -16, 0 )
+
+[node name="4_Stone_Line379" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 158.5, -16, 0 )
+
+[node name="4_Stone_Line380" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 130.5, -16, 0 )
+
+[node name="4_Stone_Line381" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134.5, -16, 0 )
+
+[node name="4_Stone_Line382" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 138.5, -16, 0 )
+
+[node name="4_Stone_Line383" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 142.5, -16, 0 )
+
+[node name="4_Stone_Line326" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134, -7, 0 )
+
+[node name="4_Stone_Line328" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 123, -6, 0 )
+
+[node name="4_Stone_Line25" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 126.5, -3, 0 )
+
+[node name="4_Stone_Line41" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 130, -7, 0 )
+
+[node name="4_Stone_Line26" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 153, -7, 0 )
+
+[node name="4_Stone_Line46" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 157, -7, 0 )
+
+[node name="4_Stone_Line20" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 62, 3.5, 0 )
+
+[node name="4_Stone_Line10" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 43.5, 8, 0 )
+
+[node name="4_Stone_Line6" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 14, 0 )
+
+[node name="4_Stone_Line17" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 14, 0 )
+
+[node name="4_Stone_Line11" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 1, 0 )
+
+[node name="4_Stone_Line12" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 2, 0 )
+
+[node name="4_Stone_Line14" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3, 0 )
+
+[node name="4_Stone_Line16" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 5, 0 )
+
+[node name="4_Stone_Line15" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 4, 0 )
+
+[node name="4_Stone_Line13" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 2, 0 )
+
+[node name="4_Stone_Line7" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 15, 0 )
+
+[node name="4_Stone_Line8" parent="Stone_Line" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -0.999999, 0 )
+
+[node name="Single_Stone" type="Spatial" parent="."]
+
+[node name="1" type="Spatial" parent="Single_Stone"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 3, 0 )
+
+[node name="1_Stone2" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 65, 19, 0 )
+
+[node name="1_Stone3" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 22, 0 )
+
+[node name="1_Stone4" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 68.5, 6.5, 0 )
+
+[node name="1_Stone5" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 147, 30.5, 0 )
+
+[node name="1_Stone6" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 136, 32.5, 0 )
+
+[node name="1_Stone7" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 161.5, 27, 0 )
+
+[node name="1_Stone9" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 197, 37.5, 0 )
+
+[node name="1_Stone28" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 159.5, -4, 0 )
+
+[node name="1_Stone26" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 156, 24.5, 0 )
+
+[node name="1_Stone17" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 165.5, 11, 0 )
+
+[node name="1_Stone11" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( 1.31134e-07, 1, 0, -1, 1.31134e-07, 0, 0, 0, 1, 198.5, 37.5, 0 )
+
+[node name="1_Stone23" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( 1.31134e-07, 1, 0, -1, 1.31134e-07, 0, 0, 0, 1, 153, -1.5, 0 )
+
+[node name="1_Stone14" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( -2.18557e-07, -1, 0, 1, -2.18557e-07, 0, 0, 0, 1, 200, 37.5, 0 )
+
+[node name="1_Stone19" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( -2.18557e-07, -1, 0, 1, -2.18557e-07, 0, 0, 0, 1, 163, 16.5, 0 )
+
+[node name="1_Stone21" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( -2.18557e-07, -1, 0, 1, -2.18557e-07, 0, 0, 0, 1, 141, 14.5, 0 )
+
+[node name="1_Stone15" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( -2.18557e-07, -1, 0, 1, -2.18557e-07, 0, 0, 0, 1, 149, 30.5, 0 )
+
+[node name="1_Stone12" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 175, 19.5, 0 )
+
+[node name="1_Stone13" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 159, 30.5, 0 )
+
+[node name="1_Stone32" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 140.5, 21.5, 0 )
+
+[node name="1_Stone16" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 146, 13.5, 0 )
+
+[node name="1_Stone10" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 195.5, 37.5, 0 )
+
+[node name="1_Stone18" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 151, 14.5, 0 )
+
+[node name="1_Stone20" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 137.5, 13.5, 0 )
+
+[node name="1_Stone22" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 155, -1, 0 )
+
+[node name="1_Stone27" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 160, 9.53674e-07, 0 )
+
+[node name="1_Stone29" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 165.5, 30.5, 0 )
+
+[node name="1_Stone31" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 169.5, 28.5, 0 )
+
+[node name="1_Stone30" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 162.5, 31.5, 0 )
+
+[node name="1_Stone25" parent="Single_Stone/1" instance=ExtResource( 24 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 149, 5, 0 )
+
+[node name="2" type="Spatial" parent="Single_Stone"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 6, 0 )
+
+[node name="2_Stone" parent="Single_Stone/2" instance=ExtResource( 16 )]
+
+[node name="2_Stone2" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 13, 0 )
+
+[node name="2_Stone3" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 8, 0 )
+
+[node name="2_Stone4" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 10, 0 )
+
+[node name="2_Stone5" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 10, 0 )
+
+[node name="2_Stone6" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 1, 0 )
+
+[node name="2_Stone7" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0 )
+
+[node name="2_Stone8" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 7, 0 )
+
+[node name="2_Stone11" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 4, 0 )
+
+[node name="2_Stone14" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, 0 )
+
+[node name="2_Stone9" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 7, 0 )
+
+[node name="2_Stone12" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 16, 0 )
+
+[node name="2_Stone10" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 4, 0 )
+
+[node name="2_Stone15" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, 0 )
+
+[node name="2_Stone13" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 15, 0 )
+
+[node name="2_Stone16" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 17, 0 )
+
+[node name="2_Stone17" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.5, 18, 0 )
+
+[node name="2_Stone18" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 52.5, 19, 0 )
+
+[node name="2_Stone19" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 5.5, 0 )
+
+[node name="2_Stone20" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 124.5, 28.5, 0 )
+
+[node name="2_Stone22" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 115, 36.5, 0 )
+
+[node name="2_Stone24" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 113.5, 29.5, 0 )
+
+[node name="2_Stone21" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 119.5, 22.5, 0 )
+
+[node name="2_Stone23" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 142.5, 30.5, 0 )
+
+[node name="2_Stone27" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 127.5, 7, 0 )
+
+[node name="2_Stone28" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 127.5, 5, 0 )
+
+[node name="2_Stone33" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 173.5, 33, 0 )
+
+[node name="2_Stone55" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 132, -2, 0 )
+
+[node name="2_Stone67" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 124, -7, 0 )
+
+[node name="2_Stone66" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 122, -7, 0 )
+
+[node name="2_Stone65" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 128.5, -5.5, 0 )
+
+[node name="2_Stone70" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 112.5, -14, 0 )
+
+[node name="2_Stone50" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 128, 16.5, 0 )
+
+[node name="2_Stone49" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 126.5, 11.5, 0 )
+
+[node name="2_Stone46" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134, 14.5, 0 )
+
+[node name="2_Stone57" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 124.5, 18.5, 0 )
+
+[node name="2_Stone58" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 126.5, 18.5, 0 )
+
+[node name="2_Stone45" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 19.5, 0 )
+
+[node name="2_Stone37" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 126.5, 30.5, 0 )
+
+[node name="2_Stone35" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 130.5, 28, 0 )
+
+[node name="2_Stone36" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135.5, 29.5, 0 )
+
+[node name="2_Stone34" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 172, 33, 0 )
+
+[node name="2_Stone53" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 172, 33, 0 )
+
+[node name="2_Stone48" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 113.5, 12.5, 0 )
+
+[node name="2_Stone47" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134, 13.5, 0 )
+
+[node name="2_Stone30" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 142, 21.5, 0 )
+
+[node name="2_Stone31" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 15.5, 0 )
+
+[node name="2_Stone51" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134, 8, 0 )
+
+[node name="2_Stone56" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134, 8, 0 )
+
+[node name="2_Stone52" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134, 7, 0 )
+
+[node name="2_Stone62" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 5, 0 )
+
+[node name="2_Stone64" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 4, 0 )
+
+[node name="2_Stone54" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134, 9.53674e-07, 0 )
+
+[node name="2_Stone59" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 136, 9.53674e-07, 0 )
+
+[node name="2_Stone60" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 148.5, 27.5, 0 )
+
+[node name="2_Stone61" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 115, 9.53674e-07, 0 )
+
+[node name="2_Stone63" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 111.5, -2, 0 )
+
+[node name="2_Stone68" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 110.5, -0.999999, 0 )
+
+[node name="2_Stone69" parent="Single_Stone/2" instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 112.5, -0.999999, 0 )
+
+[node name="3" type="Spatial" parent="Single_Stone"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 7, 0 )
+
+[node name="3_Stone" parent="Single_Stone/3" instance=ExtResource( 15 )]
+
+[node name="3_Stone2" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -1, 0 )
+
+[node name="3_Stone3" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 9, 0 )
+
+[node name="3_Stone4" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 12, 0 )
+
+[node name="3_Stone5" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 7, 0 )
+
+[node name="3_Stone6" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 9, 0 )
+
+[node name="3_Stone7" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 6, 0 )
+
+[node name="3_Stone8" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 3, 0 )
+
+[node name="3_Stone9" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 6, 0 )
+
+[node name="3_Stone10" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 15, 0 )
+
+[node name="3_Stone11" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5, 9.53674e-07, 0 )
+
+[node name="3_Stone12" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 4, 0 )
+
+[node name="3_Stone13" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 57.5, 16, 0 )
+
+[node name="3_Stone14" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 142, 14.5, 0 )
+
+[node name="3_Stone20" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 140.5, 17.5, 0 )
+
+[node name="3_Stone15" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134.5, 20.5, 0 )
+
+[node name="3_Stone16" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134.5, 22.5, 0 )
+
+[node name="3_Stone19" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 129.5, 28.5, 0 )
+
+[node name="3_Stone18" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135.5, 21.5, 0 )
+
+[node name="3_Stone17" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 133.5, 19.5, 0 )
+
+[node name="3_Stone22" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 142.5, 3, 0 )
+
+[node name="3_Stone33" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 141.5, 1, 0 )
+
+[node name="3_Stone23" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 142.5, 5, 0 )
+
+[node name="3_Stone24" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 142.5, 7, 0 )
+
+[node name="3_Stone55" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 143.5, 6, 0 )
+
+[node name="3_Stone25" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 142.5, 8, 0 )
+
+[node name="3_Stone26" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 188.5, 30.5, 0 )
+
+[node name="3_Stone54" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 148, 13.5, 0 )
+
+[node name="3_Stone52" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 149, -2, 0 )
+
+[node name="3_Stone56" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 150, -1, 0 )
+
+[node name="3_Stone49" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 148, -3, 0 )
+
+[node name="3_Stone53" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 146, -3, 0 )
+
+[node name="3_Stone57" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 138, -8, 0 )
+
+[node name="3_Stone48" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 150, 13.5, 0 )
+
+[node name="3_Stone46" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 149, 11.5, 0 )
+
+[node name="3_Stone43" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 162.5, 23.5, 0 )
+
+[node name="3_Stone44" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 158, 20.5, 0 )
+
+[node name="3_Stone45" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 157.5, 19.5, 0 )
+
+[node name="3_Stone41" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 158.5, 17.5, 0 )
+
+[node name="3_Stone32" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 142.5, 29.5, 0 )
+
+[node name="3_Stone29" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 187, 30.5, 0 )
+
+[node name="3_Stone42" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 129.5, 11.5, 0 )
+
+[node name="3_Stone28" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 155.5, 16.5, 0 )
+
+[node name="3_Stone27" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 149, 14.5, 0 )
+
+[node name="3_Stone47" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 149, 5, 0 )
+
+[node name="3_Stone51" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 151, 4, 0 )
+
+[node name="3_Stone50" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 149, 4, 0 )
+
+[node name="3_Stone21" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 162.5, 25.5, 0 )
+
+[node name="3_Stone30" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 129, -2, 0 )
+
+[node name="3_Stone34" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 123.5, -5, 0 )
+
+[node name="3_Stone35" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 125.5, -3, 0 )
+
+[node name="3_Stone38" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 128.5, -13, 0 )
+
+[node name="3_Stone58" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 128.5, -16, 0 )
+
+[node name="3_Stone59" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 128.5, -17, 0 )
+
+[node name="3_Stone36" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 126.5, -2, 0 )
+
+[node name="3_Stone37" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 127.5, -3, 0 )
+
+[node name="3_Stone31" parent="Single_Stone/3" instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 129.5, -3, 0 )
+
+[node name="4" type="Spatial" parent="Single_Stone"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 6, 0 )
+
+[node name="4_Stone" parent="Single_Stone/4" instance=ExtResource( 25 )]
+
+[node name="4_Stone2" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 13, 0 )
+
+[node name="4_Stone3" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 15, 0 )
+
+[node name="4_Stone4" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 13, 0 )
+
+[node name="4_Stone10" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49, 3.5, 0 )
+
+[node name="4_Stone8" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.5, 17, 0 )
+
+[node name="4_Stone9" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 52.5, 19, 0 )
+
+[node name="4_Stone7" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14, -0.999999, 0 )
+
+[node name="4_Stone6" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.5, 4, 0 )
+
+[node name="4_Stone5" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 16, 0 )
+
+[node name="4_Stone11" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 126.5, 14.5, 0 )
+
+[node name="4_Stone12" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 118, 19.5, 0 )
+
+[node name="4_Stone15" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 111, -5, 0 )
+
+[node name="4_Stone13" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 120.5, 22.5, 0 )
+
+[node name="4_Stone14" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 123.5, 27.5, 0 )
+
+[node name="4_Stone16" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 138, 24, 0 )
+
+[node name="4_Stone17" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 128.5, 7, 0 )
+
+[node name="4_Stone18" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 20.5, 0 )
+
+[node name="4_Stone19" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 172.5, 30, 0 )
+
+[node name="4_Stone26" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 131, 4, 0 )
+
+[node name="4_Stone48" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 129, -2, 0 )
+
+[node name="4_Stone38" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 143.5, 0.999997, 0 )
+
+[node name="4_Stone32" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 133, 11.5, 0 )
+
+[node name="4_Stone37" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 111.5, 13.5, 0 )
+
+[node name="4_Stone33" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 132, 18.5, 0 )
+
+[node name="4_Stone27" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 128, 25, 0 )
+
+[node name="4_Stone24" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 174, 30, 0 )
+
+[node name="4_Stone47" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 133, -2, 0 )
+
+[node name="4_Stone45" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134, 11.5, 0 )
+
+[node name="4_Stone43" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 136, 5, 0 )
+
+[node name="4_Stone40" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 136.5, 21.5, 0 )
+
+[node name="4_Stone35" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 139.5, 16.5, 0 )
+
+[node name="4_Stone29" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 130.5, 28, 0 )
+
+[node name="4_Stone28" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 129, 25, 0 )
+
+[node name="4_Stone25" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 175.5, 30, 0 )
+
+[node name="4_Stone36" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 116.5, 12.5, 0 )
+
+[node name="4_Stone34" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 133, 18.5, 0 )
+
+[node name="4_Stone21" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 171, 30, 0 )
+
+[node name="4_Stone23" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 105, -6, 0 )
+
+[node name="4_Stone39" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 140.5, -4, 0 )
+
+[node name="4_Stone42" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 126, 16.5, 0 )
+
+[node name="4_Stone41" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 144, 11, 0 )
+
+[node name="4_Stone22" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1.31134e-07, 1, 0, -1, 1.31134e-07, 0, 0, 0, 1, 140.5, 20.5, 0 )
+
+[node name="4_Stone20" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 15.5, 0 )
+
+[node name="4_Stone44" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 10.5, 0 )
+
+[node name="4_Stone46" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 127.5, 1, 0 )
+
+[node name="4_Stone49" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 126.5, 0.999997, 0 )
+
+[node name="4_Stone50" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 126.5, 18.5, 0 )
+
+[node name="4_Stone51" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 136.5, -3, 0 )
+
+[node name="4_Stone53" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 146.5, 27.5, 0 )
+
+[node name="4_Stone52" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 113, 9.53674e-07, 0 )
+
+[node name="4_Stone54" parent="Single_Stone/4" instance=ExtResource( 25 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 108.5, -0.999999, 0 )
+
+[node name="5" type="Spatial" parent="Single_Stone"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 19, 0 )
+
+[node name="5_Stone" parent="Single_Stone/5" instance=ExtResource( 11 )]
+
+[node name="5_Stone2" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -3, 0 )
+
+[node name="5_Stone3" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 1, 0 )
+
+[node name="5_Stone4" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 2, 0 )
+
+[node name="5_Stone5" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -6, 0 )
+
+[node name="5_Stone7" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 3, 0 )
+
+[node name="5_Stone6" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5, 1, 0 )
+
+[node name="5_Stone8" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38, -9, 0 )
+
+[node name="5_Stone9" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 52.5, 7, 0 )
+
+[node name="5_Stone10" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 60, -7.5, 0 )
+
+[node name="5_Stone12" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 113.5, 10.5, 0 )
+
+[node name="5_Stone13" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 124.5, 1.5, 0 )
+
+[node name="5_Stone14" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 124.5, 15.5, 0 )
+
+[node name="5_Stone15" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 179.5, 21.5, 0 )
+
+[node name="5_Stone43" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135, 18.5, 0 )
+
+[node name="5_Stone49" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 116, 19.5, 0 )
+
+[node name="5_Stone45" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 139.5, 16.5, 0 )
+
+[node name="5_Stone44" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 135.5, 16.5, 0 )
+
+[node name="5_Stone38" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 145, -18, 0 )
+
+[node name="5_Stone46" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 146, -21, 0 )
+
+[node name="5_Stone47" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 146, -23, 0 )
+
+[node name="5_Stone35" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 133.5, 9.5, 0 )
+
+[node name="5_Stone33" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 128.5, -18.5, 0 )
+
+[node name="5_Stone50" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 113.5, -28, 0 )
+
+[node name="5_Stone48" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134, -10, 0 )
+
+[node name="5_Stone31" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 146, -8, 0 )
+
+[node name="5_Stone30" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 146, -3, 0 )
+
+[node name="5_Stone18" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 143.5, 6.5, 0 )
+
+[node name="5_Stone16" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 179.5, 21.5, 0 )
+
+[node name="5_Stone23" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 146.5, 15.5, 0 )
+
+[node name="5_Stone41" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 154.5, 5.5, 0 )
+
+[node name="5_Stone39" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 149, -15, 0 )
+
+[node name="5_Stone40" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 147, -13, 0 )
+
+[node name="5_Stone17" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1.31134e-07, 1, 0, -1, 1.31134e-07, 0, 0, 0, 1, 182.5, 21.5, 0 )
+
+[node name="5_Stone21" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 181, 21.5, 0 )
+
+[node name="5_Stone25" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 126, -20, 0 )
+
+[node name="5_Stone34" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 135, -10, 0 )
+
+[node name="5_Stone32" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 136, -6, 0 )
+
+[node name="5_Stone26" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 134.5, 9.5, 0 )
+
+[node name="5_Stone22" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 184, 21.5, 0 )
+
+[node name="5_Stone36" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 184, 21.5, 0 )
+
+[node name="5_Stone29" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 116.5, -0.500004, 0 )
+
+[node name="5_Stone24" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 128.5, 16.5, 0 )
+
+[node name="5_Stone19" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 152, 4.5, 0 )
+
+[node name="5_Stone20" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 136, 15.5, 0 )
+
+[node name="5_Stone28" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 114.5, -1.5, 0 )
+
+[node name="5_Stone37" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 132, -16, 0 )
+
+[node name="5_Stone42" parent="Single_Stone/5" instance=ExtResource( 11 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 142.5, 15.5, 0 )
+
+[node name="6" type="Spatial" parent="Single_Stone"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 21, 0 )
+
+[node name="6_Stone" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30, -1, 0 )
+
+[node name="6_Stone2" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -5, 0 )
+
+[node name="6_Stone3" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 57, -4, 0 )
+
+[node name="6_Stone4" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 45, -8, 0 )
+
+[node name="6_Stone6" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 57, -10, 0 )
+
+[node name="6_Stone5" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.5, 1, 0 )
+
+[node name="6_Stone7" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 88.5, -14.5, 0 )
+
+[node name="6_Stone11" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 140.5, -18, 0 )
+
+[node name="6_Stone10" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 145.5, 5.5, 0 )
+
+[node name="6_Stone12" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 153.5, -12, 0 )
+
+[node name="6_Stone13" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 204.5, 18, 0 )
+
+[node name="6_Stone34" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 172, 12.5, 0 )
+
+[node name="6_Stone32" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 165.5, 0.5, 0 )
+
+[node name="6_Stone28" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 161, -1.5, 0 )
+
+[node name="6_Stone15" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 161, -9, 0 )
+
+[node name="6_Stone14" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 160, 2.5, 0 )
+
+[node name="6_Stone16" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 206, 18, 0 )
+
+[node name="6_Stone21" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 135.5, -18, 0 )
+
+[node name="6_Stone23" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 138.5, -28, 0 )
+
+[node name="6_Stone20" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 154.5, -13, 0 )
+
+[node name="6_Stone31" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 158, -0.5, 0 )
+
+[node name="6_Stone33" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 157, -4.5, 0 )
+
+[node name="6_Stone29" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 160, -14, 0 )
+
+[node name="6_Stone26" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 171, -9, 0 )
+
+[node name="6_Stone25" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 172.5, 7.5, 0 )
+
+[node name="6_Stone24" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 145.5, 9.5, 0 )
+
+[node name="6_Stone22" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 165.5, 1.5, 0 )
+
+[node name="6_Stone18" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( 1.31134e-07, 1, 0, -1, 1.31134e-07, 0, 0, 0, 1, 207.5, 18, 0 )
+
+[node name="6_Stone19" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( -2.18557e-07, -1, 0, 1, -2.18557e-07, 0, 0, 0, 1, 209, 18, 0 )
+
+[node name="6_Stone17" parent="Single_Stone/6" instance=ExtResource( 20 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 167, 6.5, 0 )
+
+[node name="7" type="Spatial" parent="Single_Stone"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31, 14, 0 )
+
+[node name="7_Stone" parent="Single_Stone/7" instance=ExtResource( 5 )]
+
+[node name="7_Stone2" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -8, 0 )
+
+[node name="7_Stone3" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, 5, 0 )
+
+[node name="7_Stone4" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5, -4, 0 )
+
+[node name="7_Stone5" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5, 10, 0 )
+
+[node name="7_Stone6" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17, -14, 0 )
+
+[node name="7_Stone7" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 91, -15, 0 )
+
+[node name="7_Stone56" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 98.5, -24, 0 )
+
+[node name="7_Stone28" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 98.5, -19, 0 )
+
+[node name="7_Stone10" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 112.5, 6.5, 0 )
+
+[node name="7_Stone12" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99.5, 22.5, 0 )
+
+[node name="7_Stone15" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 101, 23.5, 0 )
+
+[node name="7_Stone8" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93, -13, 0 )
+
+[node name="7_Stone11" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 107.5, 3.5, 0 )
+
+[node name="7_Stone9" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93.5, -12, 0 )
+
+[node name="7_Stone13" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 104, 11.5, 0 )
+
+[node name="7_Stone16" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 164.5, 23.5, 0 )
+
+[node name="7_Stone49" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 133, 17.5, 0 )
+
+[node name="7_Stone45" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 130, -14, 0 )
+
+[node name="7_Stone52" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 131, -17, 0 )
+
+[node name="7_Stone46" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134, -11, 0 )
+
+[node name="7_Stone42" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 111.5, 13.5, 0 )
+
+[node name="7_Stone43" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 116.5, 21, 0 )
+
+[node name="7_Stone40" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 120, 1, 0 )
+
+[node name="7_Stone19" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 130.5, -5, 0 )
+
+[node name="7_Stone35" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 131, -4, 0 )
+
+[node name="7_Stone34" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 131, 1, 0 )
+
+[node name="7_Stone17" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 128.5, 10.5, 0 )
+
+[node name="7_Stone29" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 119, 12.5, 0 )
+
+[node name="7_Stone26" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 116, 18, 0 )
+
+[node name="7_Stone20" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 132.5, 16.5, 0 )
+
+[node name="7_Stone18" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1.31134e-07, 1, 0, -1, 1.31134e-07, 0, 0, 0, 1, 167.5, 23.5, 0 )
+
+[node name="7_Stone23" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 166, 23.5, 0 )
+
+[node name="7_Stone47" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 114, 23.5, 0 )
+
+[node name="7_Stone48" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 122.5, 21.5, 0 )
+
+[node name="7_Stone44" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 123, -8, 0 )
+
+[node name="7_Stone39" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 115, 8.5, 0 )
+
+[node name="7_Stone55" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 115.5, -6, 0 )
+
+[node name="7_Stone38" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 120, -4, 0 )
+
+[node name="7_Stone37" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 115.5, -13.5, 0 )
+
+[node name="7_Stone53" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 97, -14, 0 )
+
+[node name="7_Stone36" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 121, 0, 0 )
+
+[node name="7_Stone30" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 114, 7.5, 0 )
+
+[node name="7_Stone27" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 116.5, 19, 0 )
+
+[node name="7_Stone24" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 169, 23.5, 0 )
+
+[node name="7_Stone33" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 102.5, 4.5, 0 )
+
+[node name="7_Stone21" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 138, 9.5, 0 )
+
+[node name="7_Stone22" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 122, 20.5, 0 )
+
+[node name="7_Stone32" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 100.5, 3.5, 0 )
+
+[node name="7_Stone41" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 118, -11, 0 )
+
+[node name="7_Stone25" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 128.5, 20.5, 0 )
+
+[node name="7_Stone50" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 138.5, 10.5, 0 )
+
+[node name="7_Stone51" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 131.5, 9.5, 0 )
+
+[node name="7_Stone14" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 99.5, -10, 0 )
+
+[node name="7_Stone54" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 102, -8, 0 )
+
+[node name="7_Stone31" parent="Single_Stone/7" instance=ExtResource( 5 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 101, -9, 0 )
+
+[node name="8" type="Spatial" parent="Single_Stone"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11, 0 )
+
+[node name="8_Stone" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0 )
+
+[node name="8_Stone2" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19, -6, 0 )
+
+[node name="8_Stone3" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.5, 9, 0 )
+
+[node name="8_Stone5" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -5, 0 )
+
+[node name="8_Stone4" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 60.5, 13, 0 )
+
+[node name="8_Stone6" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 55, -1, 0 )
+
+[node name="8_Stone10" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 144.5, 5, 0 )
+
+[node name="8_Stone9" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 130.5, -9, 0 )
+
+[node name="8_Stone11" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1.31134e-07, 1, 0, -1, 1.31134e-07, 0, 0, 0, 1, 198.5, 25, 0 )
+
+[node name="8_Stone30" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1.31134e-07, 1, 0, -1, 1.31134e-07, 0, 0, 0, 1, 198.5, 25, 0 )
+
+[node name="8_Stone14" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1.31134e-07, 1, 0, -1, 1.31134e-07, 0, 0, 0, 1, 198.5, 25, 0 )
+
+[node name="8_Stone18" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 164, -6, 0 )
+
+[node name="8_Stone33" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 195.5, 25, 0 )
+
+[node name="8_Stone36" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 126.5, -7, 0 )
+
+[node name="8_Stone37" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 129.5, -17, 0 )
+
+[node name="8_Stone28" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 151, -3, 0 )
+
+[node name="8_Stone26" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 158.5, -3, 0 )
+
+[node name="8_Stone25" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 162, 2, 0 )
+
+[node name="8_Stone24" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 163.5, 18.5, 0 )
+
+[node name="8_Stone19" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 200, 25, 0 )
+
+[node name="8_Stone16" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, 197, 25, 0 )
+
+[node name="8_Stone20" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, 148.5, 24, 0 )
+
+[node name="8_Stone35" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, 163, 21.5, 0 )
+
+[node name="8_Stone34" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, 156.5, 9.5, 0 )
+
+[node name="8_Stone32" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, 143.5, 16.5, 0 )
+
+[node name="8_Stone27" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, 152, 4, 0 )
+
+[node name="8_Stone29" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, 144.5, -3, 0 )
+
+[node name="8_Stone17" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, 152, 7.5, 0 )
+
+[node name="8_Stone23" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, 151, 11.5, 0 )
+
+[node name="8_Stone21" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( 1, -1.74846e-07, 0, 1.74846e-07, 1, 0, 0, 0, 1, 142.5, 23.5, 0 )
+
+[node name="8_Stone15" parent="Single_Stone/8" instance=ExtResource( 12 )]
+transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 156.5, 12.5, 0 )
+
+[node name="Singel_Grass" type="Spatial" parent="."]
+
+[node name="1" type="Spatial" parent="Singel_Grass"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 10.5, 0 )
+
+[node name="1_Grass" parent="Singel_Grass/1" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0 )
+
+[node name="1_Grass2" parent="Singel_Grass/1" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 106.5, -2.5, 0 )
+
+[node name="2" type="Spatial" parent="Singel_Grass"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 4, 0 )
+
+[node name="2_Grass" parent="Singel_Grass/2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+
+[node name="2_Grass2" parent="Singel_Grass/2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 18, 0 )
+
+[node name="2_Grass3" parent="Singel_Grass/2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 10, 0 )
+
+[node name="2_Grass4" parent="Singel_Grass/2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 12, 0 )
+
+[node name="2_Grass8" parent="Singel_Grass/2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 6, 0 )
+
+[node name="2_Grass12" parent="Singel_Grass/2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.5, 10, 0 )
+
+[node name="2_Grass11" parent="Singel_Grass/2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 6, 0 )
+
+[node name="2_Grass6" parent="Singel_Grass/2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 9, 0 )
+
+[node name="2_Grass9" parent="Singel_Grass/2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 17, 0 )
+
+[node name="2_Grass13" parent="Singel_Grass/2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 17, 0 )
+
+[node name="2_Grass14" parent="Singel_Grass/2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 105.5, 16.5, 0 )
+
+[node name="2_Grass15" parent="Singel_Grass/2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 103.5, 16.5, 0 )
+
+[node name="2_Grass16" parent="Singel_Grass/2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 127.5, 20.5, 0 )
+
+[node name="2_Grass17" parent="Singel_Grass/2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 125.5, 2, 0 )
+
+[node name="2_Grass18" parent="Singel_Grass/2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 123.5, 2, 0 )
+
+[node name="2_Grass19" parent="Singel_Grass/2" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 96.5, 7, 0 )
+
+[node name="3" type="Spatial" parent="Singel_Grass"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 4, 0 )
+
+[node name="3_Grass" parent="Singel_Grass/3" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+
+[node name="3_Grass10" parent="Singel_Grass/3" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 0 )
+
+[node name="3_Grass2" parent="Singel_Grass/3" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 18, 0 )
+
+[node name="3_Grass3" parent="Singel_Grass/3" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 12, 0 )
+
+[node name="3_Grass4" parent="Singel_Grass/3" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 9, 0 )
+
+[node name="3_Grass11" parent="Singel_Grass/3" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 3, 0 )
+
+[node name="3_Grass6" parent="Singel_Grass/3" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 6, 0 )
+
+[node name="3_Grass7" parent="Singel_Grass/3" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 6, 0 )
+
+[node name="3_Grass5" parent="Singel_Grass/3" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 9, 0 )
+
+[node name="3_Grass8" parent="Singel_Grass/3" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.5, 10, 0 )
+
+[node name="3_Grass9" parent="Singel_Grass/3" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 17, 0 )
+
+[node name="3_Grass12" parent="Singel_Grass/3" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 103.5, 16.5, 0 )
+
+[node name="3_Grass14" parent="Singel_Grass/3" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 123.5, 2, 0 )
+
+[node name="3_Grass16" parent="Singel_Grass/3" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 96.5, 7, 0 )
+
+[node name="3_Grass15" parent="Singel_Grass/3" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 121.5, 2, 0 )
+
+[node name="4" type="Spatial" parent="Singel_Grass"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 10.5, 0 )
+
+[node name="4_Grass" parent="Singel_Grass/4" instance=ExtResource( 21 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.5, 0 )
+
+[node name="4_Grass4" parent="Singel_Grass/4" instance=ExtResource( 21 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, -3.5, 0 )
+
+[node name="4_Grass2" parent="Singel_Grass/4" instance=ExtResource( 21 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 11.5, 0 )
+
+[node name="4_Grass3" parent="Singel_Grass/4" instance=ExtResource( 21 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 2.5, 0 )
+
+[node name="5" type="Spatial" parent="Singel_Grass"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 4, 0 )
+
+[node name="5_Grass" parent="Singel_Grass/5" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 1, 0 )
+
+[node name="5_Grass3" parent="Singel_Grass/5" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5, 6, 0 )
+
+[node name="5_Grass4" parent="Singel_Grass/5" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 12, 0 )
+
+[node name="5_Grass5" parent="Singel_Grass/5" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 9, 0 )
+
+[node name="5_Grass6" parent="Singel_Grass/5" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 6, 0 )
+
+[node name="5_Grass7" parent="Singel_Grass/5" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.5, 10, 0 )
+
+[node name="5_Grass8" parent="Singel_Grass/5" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 6.5, 0 )
+
+[node name="5_Grass9" parent="Singel_Grass/5" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 85, 7, 0 )
+
+[node name="5_Grass12" parent="Singel_Grass/5" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 103.5, 16.5, 0 )
+
+[node name="5_Grass11" parent="Singel_Grass/5" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 71, 3.5, 0 )
+
+[node name="5_Grass10" parent="Singel_Grass/5" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 62, 20.5, 0 )
+
+[node name="5_Grass13" parent="Singel_Grass/5" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 127.5, 20.5, 0 )
+
+[node name="5_Grass14" parent="Singel_Grass/5" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 122.5, 2, 0 )
+
+[node name="5_Grass15" parent="Singel_Grass/5" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 96.5, 7, 0 )
+
+[node name="6" type="Spatial" parent="Singel_Grass"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 14, 0 )
+
+[node name="6_Grass" parent="Singel_Grass/6" instance=ExtResource( 28 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 66, 11, 0 )
+
+[node name="6_Grass2" parent="Singel_Grass/6" instance=ExtResource( 28 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 43.5, 1, 0 )
+
+[node name="6_Grass3" parent="Singel_Grass/6" instance=ExtResource( 28 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 55, 0, 0 )
+
+[node name="6_Grass4" parent="Singel_Grass/6" instance=ExtResource( 28 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 96.5, -6.5, 0 )
+
+[node name="6_Grass5" parent="Singel_Grass/6" instance=ExtResource( 28 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 110.5, -3, 0 )
+
+[node name="6_Grass6" parent="Singel_Grass/6" instance=ExtResource( 28 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 87.5, 10.5, 0 )
+
+[node name="7" type="Spatial" parent="Singel_Grass"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, 0 )
+
+[node name="7_Grass" parent="Singel_Grass/7" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49.5, 17, 0 )
+
+[node name="7_Grass2" parent="Singel_Grass/7" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38.5, 14, 0 )
+
+[node name="7_Grass3" parent="Singel_Grass/7" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 54, 24, 0 )
+
+[node name="7_Grass4" parent="Singel_Grass/7" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59, 22, 0 )
+
+[node name="7_Grass5" parent="Singel_Grass/7" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 77, 27, 0 )
+
+[node name="7_Grass7" parent="Singel_Grass/7" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 96.5, 2.5, 0 )
+
+[node name="7_Grass6" parent="Singel_Grass/7" instance=ExtResource( 23 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 81, 6.5, 0 )
+
+[node name="8" type="Spatial" parent="Singel_Grass"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 15, 0 )
+
+[node name="8_Grass" parent="Singel_Grass/8" instance=ExtResource( 29 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 3, 0 )
+
+[node name="8_Grass2" parent="Singel_Grass/8" instance=ExtResource( 29 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -15, 0 )
+
+[node name="8_Grass3" parent="Singel_Grass/8" instance=ExtResource( 29 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32, -4.5, 0 )
+
+[node name="8_Grass4" parent="Singel_Grass/8" instance=ExtResource( 29 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 42.5, -7.5, 0 )
+
+[node name="Flying_Rocks" type="Spatial" parent="."]
+
+[node name="1_Flying_Rocks" parent="Flying_Rocks" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 84.5, 28, 0 )
+
+[node name="1_Flying_Rocks2" parent="Flying_Rocks" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 49.5, 7.5, 0 )
+
+[node name="1_Flying_Rocks3" parent="Flying_Rocks" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 82.5, 11.5, 0 )
+
+[node name="1_Flying_Rocks8" parent="Flying_Rocks" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 93, 19, 0 )
+
+[node name="1_Flying_Rocks7" parent="Flying_Rocks" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 81, -2.5, 0 )
+
+[node name="1_Flying_Rocks5" parent="Flying_Rocks" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 116.5, 14.5, 0 )
+
+[node name="1_Flying_Rocks6" parent="Flying_Rocks" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 134.5, 15, 0 )
+
+[node name="1_Flying_Rocks4" parent="Flying_Rocks" instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 105, 14.5, 0 )
+
+[node name="2_Fyling_Rocks" parent="Flying_Rocks" instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 60.5, 19, 0 )

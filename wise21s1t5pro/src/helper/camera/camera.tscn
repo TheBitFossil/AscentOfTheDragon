@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/helper/camera/camera.gd" type="Script" id=1]
+
+[node name="Camera" type="Camera"]
+transform = Transform( 1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, -1.19209e-07, 0, 5 )
+current = true
+script = ExtResource( 1 )
+vertical_follow_speed = 25.0
+horizontal_follow_speed = 20.0
+min_bound_y = 2.0

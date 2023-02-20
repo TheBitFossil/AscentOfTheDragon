@@ -1,0 +1,116 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/models3d/kotengu/enemy_kotengu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/loot/shard.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/actors/enemy/enemy_bullet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/audio/bubble_escape.wav" type="AudioStream" id=4]
+[ext_resource path="res://src/audio/bubble_capture.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/models3d/bubbles/player_bubble.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/actors/enemy/enemy_kotengu.gd" type="Script" id=9]
+
+[sub_resource type="CapsuleShape" id=17]
+radius = 0.607091
+height = 0.732394
+
+[sub_resource type="BoxShape" id=19]
+extents = Vector3( 3, 0.643024, 1 )
+
+[node name="EnemyKotengu" type="KinematicBody"]
+collision_layer = 2
+collision_mask = 13
+axis_lock_motion_z = true
+move_lock_z = true
+script = ExtResource( 9 )
+speed = 2.7
+acceleration = 0.5
+fire_rate = 0.9
+bullet = ExtResource( 3 )
+loot_drop = ExtResource( 2 )
+capture_sounds = [ ExtResource( 5 ), ExtResource( 4 ) ]
+
+[node name="player_bubble" parent="." instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00582, 0 )
+visible = false
+
+[node name="BubblePlayer_1" parent="player_bubble" index="0"]
+transform = Transform( 0.995873, 0, -0.0907577, 0, 1, 0, 0.0907577, 0, 0.995873, 0, 0, 0 )
+
+[node name="enemy_kotengu" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0 )
+
+[node name="AnimationPlayer" parent="enemy_kotengu" index="1"]
+autoplay = "IDLE_STAND"
+
+[node name="capture_timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="fire_rate" type="Timer" parent="."]
+one_shot = true
+
+[node name="edgepatrol_timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="resume_action_timer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="muzzle" type="Position3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2962, 1.55859, 0 )
+
+[node name="collision_shape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.966735, 0 )
+shape = SubResource( 17 )
+
+[node name="world_detection" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.202418, 0 )
+
+[node name="wall" type="RayCast" parent="world_detection"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.682415, 0.317087, 0 )
+enabled = true
+cast_to = Vector3( 1, 0, 0 )
+collision_mask = 4
+
+[node name="edge_front" type="RayCast" parent="world_detection"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.54853, 0, 0 )
+enabled = true
+collision_mask = 4
+
+[node name="edge_back" type="RayCast" parent="world_detection"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.214671, 0, 0 )
+enabled = true
+cast_to = Vector3( 0, -2, 0 )
+collision_mask = 4
+
+[node name="stairs" type="RayCast" parent="world_detection"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0 )
+cast_to = Vector3( 1, -1, 0 )
+collision_mask = 4
+
+[node name="player_detection" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.732652, 0.333074, 0 )
+collision_layer = 2
+collision_mask = 32
+
+[node name="CollisionShape" type="CollisionShape" parent="player_detection"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.83883, 0.870385, 0 )
+shape = SubResource( 19 )
+
+[node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.07067, 0 )
+aabb = AABB( -1, -1, -0.683101, 2, 2, 1.3662 )
+
+[node name="AudioStreamPlayer_Effects" type="AudioStreamPlayer" parent="."]
+bus = "Effects"
+
+[connection signal="attack" from="enemy_kotengu" to="." method="_on_enemy_kotengu_attack"]
+[connection signal="timeout" from="capture_timer" to="." method="_on_CaptureTimer_timeout"]
+[connection signal="timeout" from="fire_rate" to="." method="_on_FireRate_timeout"]
+[connection signal="timeout" from="edgepatrol_timer" to="." method="_on_EdgePatrolTimer_timeout"]
+[connection signal="timeout" from="resume_action_timer" to="." method="_on_resume_action_timer_timeout"]
+[connection signal="body_entered" from="player_detection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="player_detection" to="." method="_on_player_detection_body_exited"]
+[connection signal="screen_entered" from="VisibilityNotifier" to="." method="_on_screen_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier" to="." method="_on_screen_exited"]
+
+[editable path="player_bubble"]
+[editable path="enemy_kotengu"]

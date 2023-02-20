@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/actors/player/coyote_timer.gd" type="Script" id=1]
+
+[sub_resource type="BoxShape" id=11]
+extents = Vector3( 0.3252, 0.0336871, 1 )
+
+[node name="coyote_timer" type="Area"]
+collision_mask = 4
+script = ExtResource( 1 )
+
+[node name="collision_shape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0463481, 0.0260549, 0 )
+shape = SubResource( 11 )
+
+[node name="timer" type="Timer" parent="."]
+wait_time = 0.12
+one_shot = true
+autostart = true
+
+[node name="ray_cast" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.456951, 0 )
+enabled = true
+cast_to = Vector3( 0, -2, 0 )
+collision_mask = 4
+
+[connection signal="body_exited" from="." to="." method="_on_coyote_timer_body_exited"]

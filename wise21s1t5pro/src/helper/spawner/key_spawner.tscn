@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/helper/spawner/key_spawner.gd" type="Script" id=1]
+
+[node name="Position" type="Position3D"]
+script = ExtResource( 1 )

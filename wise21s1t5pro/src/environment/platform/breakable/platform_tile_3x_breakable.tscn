@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/environment/platform/breakable/platform_breaking.gd" type="Script" id=1]
+[ext_resource path="res://src/environment/platform/breakable/platform_breaking_moss_single.tscn" type="PackedScene" id=2]
+
+[node name="3_Tile_Breakable" type="Spatial"]
+script = ExtResource( 1 )
+is_breakable = true
+react_to_player = true
+
+[node name="platform_breaking_moss" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.999997, -0.00223266, 0.000244934, 0.00223262, 0.999997, 0.000156401, -0.000245287, -0.000155847, 1, -1, 0, 0 )
+
+[node name="platform_breaking_moss_2" parent="." instance=ExtResource( 2 )]
+
+[node name="platform_breaking_moss_3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
+
+[connection signal="create_new" from="platform_breaking_moss" to="." method="_on_platform_breaking_moss_create_new"]
+[connection signal="create_new" from="platform_breaking_moss_2" to="." method="_on_platform_breaking_moss_create_new"]
+[connection signal="create_new" from="platform_breaking_moss_3" to="." method="_on_platform_breaking_moss_create_new"]

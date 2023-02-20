@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/ui/texture_button/change_scene_button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/themes/theme.tres" type="Theme" id=2]
+[ext_resource path="res://src/ui/texture_button/change_scene_button.gd" type="Script" id=3]
+[ext_resource path="res://src/ui/texture_button/quit_button.tscn" type="PackedScene" id=4]
+
+[node name="MarginContainer" type="MarginContainer"]
+anchor_left = 0.662
+anchor_top = 0.529
+anchor_right = 0.662
+anchor_bottom = 0.529
+margin_left = -1264.04
+margin_top = -564.32
+margin_right = -779.04
+margin_bottom = 5.67999
+rect_min_size = Vector2( 350, 350 )
+theme = ExtResource( 2 )
+
+[node name="Menu" type="VBoxContainer" parent="."]
+margin_right = 485.0
+margin_bottom = 708.0
+custom_constants/separation = 24
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" parent="Menu" instance=ExtResource( 1 )]
+margin_right = 485.0
+margin_bottom = 220.0
+rect_min_size = Vector2( 240, 50 )
+script = ExtResource( 3 )
+
+[node name="Credits" parent="Menu" instance=ExtResource( 1 )]
+margin_top = 244.0
+margin_right = 485.0
+margin_bottom = 464.0
+rect_min_size = Vector2( 240, 50 )
+script = ExtResource( 3 )
+
+[node name="QuitButton" parent="Menu" instance=ExtResource( 4 )]
+margin_top = 488.0
+margin_right = 485.0
+margin_bottom = 708.0
+rect_min_size = Vector2( 240, 50 )
+size_flags_horizontal = 5
+
+[connection signal="button_up" from="Menu/StartButton" to="Menu/StartButton" method="_on_button_up"]
+[connection signal="button_up" from="Menu/Credits" to="Menu/Credits" method="_on_button_up"]

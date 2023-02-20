@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/environment/platform/trigger/platform_trigger.gd" type="Script" id=1]
+[ext_resource path="res://assets/models3d/log/broken_log_6x1.tscn" type="PackedScene" id=2]
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.629852, 0.706641, 1 )
+
+[node name="trigger_platform" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="broken_log_6x1" parent="." instance=ExtResource( 2 )]
+
+[node name="broken_log_right" parent="broken_log_6x1" index="0"]
+transform = Transform( -7.15256e-08, 0, 0.6, 0, 0.6, 0, -0.6, 0, -7.15256e-08, 0, 0, 0 )
+
+[node name="area" type="Area" parent="."]
+
+[node name="coll_shape" type="CollisionShape" parent="area"]
+shape = SubResource( 3 )
+
+[node name="timer" type="Timer" parent="area"]
+one_shot = true
+
+[connection signal="body_entered" from="area" to="." method="_on_area_body_entered"]
+
+[editable path="broken_log_6x1"]

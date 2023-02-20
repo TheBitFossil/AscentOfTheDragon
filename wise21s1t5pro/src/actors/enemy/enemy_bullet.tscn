@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/actors/enemy/enemy_bullet.gd" type="Script" id=1]
+[ext_resource path="res://assets/models3d/bubbles/enemy_bubble_lightning.tscn" type="PackedScene" id=3]
+
+[sub_resource type="PhysicsMaterial" id=3]
+friction = 0.39
+bounce = 1.0
+
+[sub_resource type="SphereShape" id=1]
+radius = 0.510836
+
+[sub_resource type="SphereShape" id=2]
+radius = 0.530961
+
+[node name="EnemyBullet" type="RigidBody"]
+collision_layer = 2
+collision_mask = 44
+physics_material_override = SubResource( 3 )
+gravity_scale = 0.0
+continuous_cd = true
+contacts_reported = 2
+contact_monitor = true
+axis_lock_linear_z = true
+axis_lock_angular_z = true
+script = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 1 )
+
+[node name="Detector" type="Area" parent="."]
+collision_layer = 0
+collision_mask = 5
+
+[node name="CollisionShape" type="CollisionShape" parent="Detector"]
+transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 2 )
+
+[node name="GarbageCollectionTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
+
+[node name="energy_ball" parent="." instance=ExtResource( 3 )]
+
+[connection signal="body_entered" from="Detector" to="." method="_on_Detector_body_entered"]
+[connection signal="timeout" from="GarbageCollectionTimer" to="." method="_on_GarbageCollectionTimer_timeout"]
+[connection signal="screen_exited" from="VisibilityNotifier" to="." method="_on_VisibilityNotifier_screen_exited"]
+
+[editable path="energy_ball"]

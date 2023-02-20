@@ -1,0 +1,254 @@
+[gd_scene load_steps=45 format=2]
+
+[ext_resource path="res://src/actors/player/player.gd" type="Script" id=1]
+[ext_resource path="res://src/actors/player/coyote_timer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/sprites/hud/double jump/double_jump.png" type="Texture" id=3]
+[ext_resource path="res://src/helper/detector/loot_detector.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/actors/player/player_health.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/actors/player/player_bullet.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/audio/double_jump.wav" type="AudioStream" id=7]
+[ext_resource path="res://src/audio/dragon_walk2.wav" type="AudioStream" id=8]
+[ext_resource path="res://src/audio/jump.wav" type="AudioStream" id=9]
+[ext_resource path="res://src/audio/lightning_damage.wav" type="AudioStream" id=10]
+[ext_resource path="res://assets/models3d/dragon/player.tscn" type="PackedScene" id=11]
+
+[sub_resource type="BoxShape" id=50]
+extents = Vector3( 0.555243, 0.739128, 0.209604 )
+
+[sub_resource type="BoxShape" id=10]
+extents = Vector3( 0.204411, 0.0819652, 0.225251 )
+
+[sub_resource type="SphereShape" id=57]
+radius = 0.493139
+
+[sub_resource type="SphereShape" id=58]
+radius = 0.419855
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "die"
+
+[sub_resource type="AnimationNodeAnimation" id=20]
+animation = "hurt"
+
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "idle"
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "run"
+
+[sub_resource type="AnimationNodeAnimation" id=44]
+animation = "run"
+
+[sub_resource type="AnimationNodeAnimation" id=45]
+animation = "run_transition_idle"
+
+[sub_resource type="AnimationNodeBlend2" id=46]
+
+[sub_resource type="AnimationNodeBlendTree" id=47]
+graph_offset = Vector2( -5, 78 )
+nodes/Animation/node = SubResource( 45 )
+nodes/Animation/position = Vector2( 120, 240 )
+"nodes/Animation 2/node" = SubResource( 44 )
+"nodes/Animation 2/position" = Vector2( 160, 420 )
+nodes/Blend2/node = SubResource( 46 )
+nodes/Blend2/position = Vector2( 400, 460 )
+nodes/output/position = Vector2( 620, 460 )
+node_connections = [ "output", 0, "Blend2", "Blend2", 0, "Animation", "Blend2", 1, "Animation 2" ]
+
+[sub_resource type="AnimationNodeAnimation" id=24]
+animation = "shoot"
+
+[sub_resource type="AnimationNodeAnimation" id=51]
+animation = "turn_from_left_to_right"
+
+[sub_resource type="AnimationNodeAnimation" id=52]
+animation = "turn_from_right_to_left"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=34]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=35]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=36]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=37]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=38]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=39]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=43]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=48]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=49]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=53]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=54]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=55]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=56]
+switch_mode = 2
+auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachine" id=41]
+states/die/node = SubResource( 19 )
+states/die/position = Vector2( 49, 314 )
+states/hurt/node = SubResource( 20 )
+states/hurt/position = Vector2( -164, 213 )
+states/idle/node = SubResource( 21 )
+states/idle/position = Vector2( -237, 12 )
+states/run/node = SubResource( 22 )
+states/run/position = Vector2( 423, 12 )
+states/run_to_idle/node = SubResource( 47 )
+states/run_to_idle/position = Vector2( 87, -53.9686 )
+states/shoot/node = SubResource( 24 )
+states/shoot/position = Vector2( 430, 158 )
+states/turn_from_left_to_right/node = SubResource( 51 )
+states/turn_from_left_to_right/position = Vector2( -302, -100.969 )
+states/turn_from_right_to_left/node = SubResource( 52 )
+states/turn_from_right_to_left/position = Vector2( -61.1874, -130.339 )
+transitions = [ "run", "shoot", SubResource( 26 ), "idle", "shoot", SubResource( 27 ), "shoot", "idle", SubResource( 28 ), "idle", "hurt", SubResource( 34 ), "hurt", "die", SubResource( 35 ), "idle", "die", SubResource( 36 ), "run", "hurt", SubResource( 37 ), "hurt", "idle", SubResource( 38 ), "shoot", "hurt", SubResource( 39 ), "idle", "run", SubResource( 43 ), "run", "run_to_idle", SubResource( 48 ), "run_to_idle", "idle", SubResource( 49 ), "idle", "turn_from_left_to_right", SubResource( 53 ), "turn_from_left_to_right", "idle", SubResource( 54 ), "idle", "turn_from_right_to_left", SubResource( 55 ), "turn_from_right_to_left", "idle", SubResource( 56 ) ]
+start_node = "idle"
+graph_offset = Vector2( -535.309, -222.159 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=42]
+
+[node name="Player" type="KinematicBody"]
+collision_mask = 22
+axis_lock_motion_z = true
+move_lock_z = true
+script = ExtResource( 1 )
+player_bullet = ExtResource( 6 )
+recharge_rate = 4.5
+bullet_speed = 14.0
+bullet_capture_time = 4.0
+invulnerable_duration = 3.5
+jump_sounds = [ ExtResource( 9 ), ExtResource( 7 ) ]
+
+[node name="bubble_collision_detector" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.256999, 0.884972, 0 )
+shape = SubResource( 50 )
+
+[node name="feet" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0236084, 0.0532475, 0.000507593 )
+shape = SubResource( 10 )
+
+[node name="mesh" type="Spatial" parent="."]
+
+[node name="facing" type="Spatial" parent="mesh"]
+
+[node name="enemy_detector_back" type="Area" parent="mesh/facing"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="tail" type="CollisionShape" parent="mesh/facing/enemy_detector_back"]
+transform = Transform( 0.638714, 0.769444, 0, -0.769444, 0.638714, 0, 0, 0, 1, -0.791709, 0.73378, 0 )
+shape = SubResource( 57 )
+
+[node name="enemy_detector_front" type="Area" parent="mesh/facing"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0403742, 0, 0 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="Head" type="CollisionShape" parent="mesh/facing/enemy_detector_front"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49789, 1.49613, 0 )
+shape = SubResource( 58 )
+
+[node name="raycast_ground" type="RayCast" parent="mesh/facing"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.282609, 0.318912, 0 )
+enabled = true
+collision_mask = 4
+
+[node name="muzzle" type="Position3D" parent="mesh/facing"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39198, 1.62906, 0.0282764 )
+
+[node name="player" parent="mesh" instance=ExtResource( 11 )]
+
+[node name="animation_tree" type="AnimationTree" parent="mesh/player"]
+tree_root = SubResource( 41 )
+anim_player = NodePath("../animation_player")
+active = true
+parameters/playback = SubResource( 42 )
+parameters/run_to_idle/Blend2/blend_amount = 0
+
+[node name="fire_rate" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="double_jump_sign" type="Sprite3D" parent="."]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.52052, 0 )
+visible = false
+texture = ExtResource( 3 )
+
+[node name="double_jump_timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[node name="recharge_rate" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="invulnerable_timer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="health_component" parent="." instance=ExtResource( 5 )]
+max_health = 5
+
+[node name="coyote_timer" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00404082, -0.0534537, 0 )
+collision_layer = 0
+
+[node name="loot_detector" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.432867, 0, 0 )
+
+[node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.139362, 0.729212, 0 )
+aabb = AABB( -3.08605, -0.741063, -0.46048, 4.64475, 1.90498, 0.920961 )
+
+[node name="audio_stream_walk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+bus = "Effects"
+
+[node name="audio_stream_jump" type="AudioStreamPlayer" parent="."]
+bus = "Effects"
+
+[node name="audio_stream_effects" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+bus = "Effects"
+
+[node name="camera_remote" type="RemoteTransform" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10 )
+update_rotation = false
+update_scale = false
+
+[connection signal="body_entered" from="mesh/facing/enemy_detector_back" to="." method="_on_enemy_detector_body_entered"]
+[connection signal="body_entered" from="mesh/facing/enemy_detector_front" to="." method="_on_enemy_detector_body_entered"]
+[connection signal="anim_shoot" from="mesh/player" to="." method="_on_player_anim_shoot"]
+[connection signal="death" from="mesh/player" to="." method="_on_player_death"]
+[connection signal="timeout" from="fire_rate" to="." method="_on_FireRate_timeout"]
+[connection signal="timeout" from="double_jump_timer" to="." method="_on_DoubleJumpBoostTimer_timeout"]
+[connection signal="timeout" from="recharge_rate" to="." method="_on_RechargeTimer_timeout"]
+[connection signal="timeout" from="invulnerable_timer" to="." method="_on_InvulnerableTimer_timeout"]
+[connection signal="player_died" from="health_component" to="." method="_on_health_component_died"]
+[connection signal="player_health_changed" from="health_component" to="." method="_on_health_component_changed"]
+[connection signal="area_exited" from="loot_detector" to="loot_detector" method="_on_LootDetector_area_exited"]
+[connection signal="loot_detected" from="loot_detector" to="." method="_on_LootDetector_loot_detected"]
+[connection signal="camera_entered" from="VisibilityNotifier" to="." method="_on_VisibilityNotifier_camera_entered"]
+[connection signal="camera_exited" from="VisibilityNotifier" to="." method="_on_VisibilityNotifier_camera_exited"]
+
+[editable path="mesh/player"]

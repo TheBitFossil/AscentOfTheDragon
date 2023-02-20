@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/background/clean_title_screen.jpg" type="Texture" id=1]
+[ext_resource path="res://src/ui/any_key_label.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/ui/any_key.gd" type="Script" id=3]
+[ext_resource path="res://src/ui/fade.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/themes/theme.tres" type="Theme" id=5]
+[ext_resource path="res://src/helper/logo.tscn" type="PackedScene" id=6]
+
+[node name="any_key" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 5 )
+script = ExtResource( 3 )
+
+[node name="back_ground" type="TextureRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+rect_min_size = Vector2( 1920, 1080 )
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 1
+
+[node name="fade" parent="." instance=ExtResource( 4 )]
+
+[node name="any_key_label" parent="." instance=ExtResource( 2 )]
+visible = false
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -690.0
+margin_top = 30.0
+margin_right = -332.0
+margin_bottom = 100.0
+valign = 1
+
+[node name="logo" parent="." instance=ExtResource( 6 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 0.0
+margin_bottom = 0.0
+
+[connection signal="fade_finished" from="fade" to="." method="_on_fade_fade_finished"]
