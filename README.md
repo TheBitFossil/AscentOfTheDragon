@@ -51,11 +51,11 @@ Godot 3.4, *GDScript
 1. Click on [Play Here](https://ascent-of-the-dragon.school4games.net/)
 
 2. Installation
-```bash
-Download the Version for your System
-Extract to a folder
-Execute, Play and Have Fun!
-```
+*
+  * Download the Version for your System
+  * Extract to a folder
+  * Execute, Play and Have Fun!
+
 
 ## Usage
 
