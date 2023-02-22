@@ -48,43 +48,33 @@ Godot 3.4, *GDScript
 
 ## Build and Installation
 
-1. Click on [Play Here](https://ascent-of-the-dragon.school4games.net/)
+* Click on [Play Here](https://ascent-of-the-dragon.school4games.net/)
 
-2. Installation
+* Installation
 
   * Download the Version for your System
   * Extract to a folder
   * Execute, Play and Have Fun!
 
+## Extras
 
-## Usage
+The repository right now, is missing a few assets, due to size restrictions\
+if you download the project, it will need some tinkering to make it run.\
 
-```python
-import foobar
-
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
-```
-
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first
-to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+But definetly feel free to look through my GDScripts, the code has not\ 
+been changed since the relese of v1.0.
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+Note that the source in this repository is licensed by the MIT license model. \
+This covers only the source code in this repository.
 
+Both Godot and OpenVR have their own license requirements.\
+See their respective git repositories for more details.
 
+The subfolder assets contains third party assets. \
+Please only use them for your own private projects as commercial usage is forbidden.
 
-
-
-Build: /b 
+# About this repository
+This repository was created by and is maintained by René Hecker a.k.a. TheBitFossil
+during my 1st Semester Project at the School For Games in Berlin.
