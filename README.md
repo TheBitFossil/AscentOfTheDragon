@@ -14,10 +14,10 @@
 
 # Ascent Of The Dragon (Student Project S4G Berlin)
 
-*2.5D Action Platformer made with the Godot Engine 3.4*
-Inspired by Bubble Bobble, the player has to trap the enemies so they can be killed.
-Those will drop shards which in return spawn key parts, hidden in the game world.
-When collecting all shards and keys, you can open and release your imprisoned friend 
+*2.5D Action Platformer made with the Godot Engine 3.4*/
+Inspired by Bubble Bobble, the player has to trap the enemies so they can be killed./
+Those will drop shards which in return spawn key parts, hidden in the game world./
+When collecting all shards and keys, you can open and release your imprisoned friend/
 and thus win the game.
 
 # Gameplay
