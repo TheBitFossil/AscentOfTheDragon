@@ -11,7 +11,6 @@
 <p align="center"> <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="36" height="36"/> </a> <a href="https://www.w3schools.com/cs/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg" alt="csharp" width="36" height="36"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="36" height="36"/> </a> <a href="https://unity.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg" alt="unity" width="36" height="40"/> </a> <a href="https://unrealengine.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/kenangundogan/fontisto/036b7eca71aab1bef8e6a0518f7329f13ed62f6b/icons/svg/brand/unreal-engine.svg" alt="unreal" width="36" height="36"/> </a> </p>
 
 # Ascent Of The Dragon (Student Project S4G Berlin)
-
 *2.5D Action Platformer made with the Godot Engine 3.4*\
 \
 **Inspired by Bubble Bobble**, the player has to **trap the enemies** so they can be killed.\
@@ -20,24 +19,20 @@ When **collecting all shards and keys**, you can open and release your imprisone
 and thus **win the game**.
 
 # Gameplay
-
 * Jump'N Run
 * Shoot
 * Explore
 * Collect
 
 # My Role
-
 * Gameplay Programmer
 * AI Progammer
 * Generalist
 
 # Engine/ Languages
-
-Godot 3.4, *GDScript
+Godot 3.4, GDScript
 
 # Responsibilities
-
 * Implemented player core features
 * Implemented AI that pauses and resumes last actions
 * Helped with Animation transitions
@@ -45,7 +40,6 @@ Godot 3.4, *GDScript
 * Translation (English)
 
 # Build and Installation
-
 * Click on [Play Here](https://ascent-of-the-dragon.school4games.net/)
 
 * Installation
@@ -55,7 +49,6 @@ Godot 3.4, *GDScript
   * Execute, Play and Have Fun!
 
 # Extras
-
 The repository right now, is missing a few assets, due to size restrictions if you download the project\
 ,it will need some tinkering to make it run.
 
@@ -63,7 +56,6 @@ But definetly feel free to look through my GDScripts, the code has not been chan
 since the relese of v1.0.
 
 # License
-
 Note that the source in this repository is licensed by the MIT license model. This covers only\ 
 the source code in this repository.
 
