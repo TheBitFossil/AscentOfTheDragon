@@ -47,15 +47,14 @@ Godot 3.4, *GDScript
 * Translation (English)
 
 ## Build and Installation
-Build(https://ascent-of-the-dragon.school4games.net/)
 
-Installation
+1. Click on [Play Here](https://ascent-of-the-dragon.school4games.net/)
 
-***
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
+2. Installation
 ```bash
-pip install foobar
+Download the Version for your System
+Extract to a folder
+Execute, Play and Have Fun!
 ```
 
 ## Usage
