@@ -1,10 +1,10 @@
-<h3 align="center">Aspiring Gameplay Programmer using Unreal Engine, Godot or Unity.</h3>
+<h4 align="center">Aspiring Gameplay Programmer using Unreal Engine, Godot or Unity.</h4>
 
 - 🔭 I’m currently a 3rd semester student at the [School For Games in Berlin](https://www.school4games.net/)
 
 - ⚡ Fun fact **I use Linux to make games.**
 
-<h3 align="left">Connect with me:</h3>
+<h4align="left">Connect with me:</h4>
 <p align="left">
 <a href="https://linkedin.com/in/thebitfossil" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="thebitfossil" height="30" width="40" /></a>
 </p>
@@ -15,10 +15,11 @@
 # Ascent Of The Dragon (Student Project S4G Berlin)
 
 *2.5D Action Platformer made with the Godot Engine 3.4*\
-Inspired by Bubble Bobble, the player has to trap the enemies so they can be killed.\
+\
+**Inspired by Bubble Bobble**, the player has to **trap the enemies** so they can be killed.\
 Those will drop shards which in return spawn key parts, hidden in the game world.\
-When collecting all shards and keys, you can open and release your imprisoned friend\
-and thus win the game.
+When **collecting all shards and keys**, you can open and release your imprisoned friend\
+and thus **win the game**.
 
 # Gameplay
 
@@ -35,13 +36,22 @@ and thus win the game.
 
 # Engine/ Languages
 
-Godot 3.4, GDScript
+Godot 3.4, *GDScript
 
 # Responsibilities
 
+* Implemented player core features
+* Implemented AI that pauses and resumes last actions
+* Helped with Animation transitions
+* Audio Engineer 
+* Translation (English)
 
-## Installation
+## Build and Installation
+Build(https://ascent-of-the-dragon.school4games.net/)
 
+Installation
+
+***
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
 
 ```bash
@@ -78,4 +88,4 @@ Please make sure to update tests as appropriate.
 
 
 
-Build: /b https://ascent-of-the-dragon.school4games.net/
+Build: /b 
