@@ -46,7 +46,7 @@ Godot 3.4, *GDScript
 * Audio Engineer 
 * Translation (English)
 
-## Build and Installation
+# Build and Installation
 
 * Click on [Play Here](https://ascent-of-the-dragon.school4games.net/)
 
