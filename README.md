@@ -49,21 +49,22 @@ Godot 3.4, GDScript
   * Execute, Play and Have Fun!
 
 # Extras
-The repository right now, is missing a few assets, due to size restrictions if you download the project\
-,it will need some tinkering to make it run.
+The repository right now, is missing a few assets, due to size restrictions if you download the project, \
+it will need some tinkering to make it run.
 
-But definetly feel free to look through my GDScripts, the code has not been changed\
-since the relese of v1.0.
+But definetly feel free to look through my GDScripts, the code has not been changed since the relese of v1.0.
 
 # License
-Note that the source in this repository is licensed by the MIT license model. This covers only\ 
-the source code in this repository.
+Note that the source in this repository is licensed by the **MIT license model** and covers only \
+the **source code** in this repository.
 
 Both Godot and OpenVR have their own license requirements. See their respective git repositories for more details.
 
-The subfolder assets contains third party assets. Please only use them for your own private projects\ 
+**All assets** are only for personal projecte and **commercial usage is not allowed**.
+
+The subfolders contains third party assets. Please only use them for your own private projects \
 as commercial usage is not allowed.
 
 # About this repository
-This repository was created by and is maintained by René Hecker a.k.a. TheBitFossil
-during my 1st Semester Project at the School For Games in Berlin.
+This repository was created during my 2nd Semester Project at the **School For Games in Berlin** \
+and is maintained by **René Hecker a.k.a. TheBitFossil**.
