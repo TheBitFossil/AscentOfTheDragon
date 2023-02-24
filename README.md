@@ -66,5 +66,5 @@ The subfolders contains third party assets. Please only use them for your own pr
 as commercial usage is not allowed.
 
 # About this repository
-This repository was created during my 2nd Semester Project at the **School For Games in Berlin** \
+This repository was created during my 1st Semester Project at the **School For Games in Berlin** \
 and is maintained by **René Hecker a.k.a. TheBitFossil**.
