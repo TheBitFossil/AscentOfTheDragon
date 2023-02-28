@@ -33,8 +33,13 @@ and thus **win the game**.
 Godot 3.4, GDScript
 
 # Responsibilities
-* Implemented player core features
-* Implemented AI that pauses and resumes last actions
+* Core <a href ="https://github.com/TheBitFossil/AscentOfTheDragon/blob/master/wise21s1t5pro/src/level/game/game.gd">Game-Data</a>
+* Implemented <a href ="https://github.com/TheBitFossil/AscentOfTheDragon/blob/master/wise21s1t5pro/src/actors/player/player.gd">player</a> core
+* <a href ="">Shooting mechanic</a>
+* Implemented AI that <a href ="https://github.com/TheBitFossil/AscentOfTheDragon/blob/master/wise21s1t5pro/src/actors/enemy/enemy_kotengu.gd">pauses and resumes</a> last actions
+* <a href ="https://github.com/TheBitFossil/AscentOfTheDragon/tree/master/wise21s1t5pro/src/loot">Loot</a> to pickup
+* <a href ="https://github.com/TheBitFossil/AscentOfTheDragon/blob/master/wise21s1t5pro/src/helper/camera/camera.gd">Camera</a> setup
+* <a href ="https://github.com/TheBitFossil/AscentOfTheDragon/tree/master/wise21s1t5pro/src/ui">UI</a>
 * Helped with Animation transitions
 * Audio Engineer 
 * Translation (English)
